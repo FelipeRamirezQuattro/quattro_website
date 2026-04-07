@@ -1,16 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Quattro Brand Tokens ──────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: rgb(23, 84, 154);
+  --color-primary-light: rgb(41, 112, 196);
+  --color-primary-dark: rgb(14, 55, 105);
+  --color-primary-glow: rgba(23, 84, 154, 0.3);
+
+  --color-accent: rgb(56, 189, 248);
+  --color-accent-2: rgb(99, 210, 255);
+
+  --color-surface-dark: rgb(8, 15, 30);
+  --color-surface-mid: rgb(12, 22, 45);
+  --color-surface-light: rgb(248, 250, 253);
+  --color-surface-white: rgb(255, 255, 255);
+
+  --color-text-primary: rgb(240, 245, 255);
+  --color-text-secondary: rgb(148, 172, 209);
+  --color-text-dark: rgb(15, 23, 42);
+
+  --color-border-dark: rgba(23, 84, 154, 0.25);
+  --color-border-light: rgba(23, 84, 154, 0.12);
+
+  --color-success: rgb(34, 197, 94);
+  --color-error: rgb(239, 68, 68);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Base resets ───────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 html {
+  scroll-behavior: smooth;
   height: 100%;
 }
 
@@ -22,19 +50,145 @@ body {
 
 body {
   min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--color-surface-dark);
+  color: var(--color-text-primary);
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+/* ── Scroll-bar styling ────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface-mid);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 3px;
+}
+
+/* ── Selection tint ────────────────────────────────────────────────────── */
+::selection {
+  background: rgba(23, 84, 154, 0.35);
+  color: #fff;
+}
+
+/* ── Animated gradient mesh background ─────────────────────────────────── */
+.gradient-mesh {
+  background: linear-gradient(
+    -45deg,
+    var(--color-surface-dark),
+    var(--color-primary-dark),
+    var(--color-surface-mid),
+    var(--color-primary)
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* ── Animated grid overlay ──────────────────────────────────────────────── */
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(23, 84, 154, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 84, 154, 0.07) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ── Shimmer border animation ───────────────────────────────────────────── */
+@keyframes shimmerBorder {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-border {
+  background: linear-gradient(
+    90deg,
+    var(--color-border-dark) 0%,
+    var(--color-accent) 50%,
+    var(--color-border-dark) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmerBorder 2s linear infinite;
+}
+
+/* ── Glow pulse ─────────────────────────────────────────────────────────── */
+.glow-pulse {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px var(--color-primary-glow);
+  }
+  50% {
+    box-shadow:
+      0 0 40px rgba(23, 84, 154, 0.7),
+      0 0 80px rgba(23, 84, 154, 0.3);
+  }
+}
+
+/* ── Float animation ────────────────────────────────────────────────────── */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* ── Marquee ────────────────────────────────────────────────────────────── */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* ── Gradient text ──────────────────────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-accent),
+    var(--color-primary)
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s linear infinite;
+}
+
+/* ── Card hover glow ────────────────────────────────────────────────────── */
+.card-glow:hover {
+  box-shadow:
+    0 0 0 1px var(--color-primary),
+    0 8px 32px rgba(23, 84, 154, 0.25),
+    0 0 60px rgba(23, 84, 154, 0.1);
 }
 
 a {
