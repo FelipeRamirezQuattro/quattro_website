@@ -42,6 +42,7 @@ export interface TeamMember {
   bio: string;
   initials: string;
   color: string;
+  image?: string;
 }
 
 export interface Service {

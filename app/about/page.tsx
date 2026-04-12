@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Award, Heart, Clock, MessageCircle, Star } from "lucide-react";
 import AnimatedSection, { AnimatedItem } from "@/components/ui/AnimatedSection";
 import CTABanner from "@/components/sections/CTABanner";
@@ -200,14 +201,26 @@ export default function AboutPage() {
                                 hover:border-quattro-primary/50 transition-all duration-300"
                 >
                   {/* Avatar */}
-                  <div
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${member.color}
-                                   flex items-center justify-center mb-5`}
-                  >
-                    <span className="font-display font-bold text-xl text-white">
-                      {member.initials}
-                    </span>
-                  </div>
+                  {member.image ? (
+                    <div className="w-16 h-16 rounded-2xl overflow-hidden mb-5">
+                      <Image
+                        src={member.image}
+                        alt={member.name}
+                        width={64}
+                        height={64}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                  ) : (
+                    <div
+                      className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${member.color}
+                                     flex items-center justify-center mb-5`}
+                    >
+                      <span className="font-display font-bold text-xl text-white">
+                        {member.initials}
+                      </span>
+                    </div>
+                  )}
                   <h3 className="font-display font-bold text-white text-lg">
                     {member.name}
                   </h3>
