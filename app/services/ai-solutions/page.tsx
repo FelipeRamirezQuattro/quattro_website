@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   Bot,
   Workflow,
@@ -29,7 +30,7 @@ const aiTracks = [
       "Form automation for permits, AFEs, and inspections",
       "Data extraction from unstructured sources (PDFs, emails, field reports)",
     ],
-    visualLabel: "Agent Console Placeholder",
+    image: "/services/ai-solutions/ai-agent.jpg",
   },
   {
     title: "Process Automation",
@@ -42,7 +43,7 @@ const aiTracks = [
       "Data entry elimination for high-volume forms",
       "Document generation from structured data",
     ],
-    visualLabel: "Workflow Map Placeholder",
+    image: "/services/ai-solutions/process-automation.jpg",
   },
   {
     title: "AI-Powered Data Integration",
@@ -55,7 +56,7 @@ const aiTracks = [
       "Real-time operational data pipelines",
       "Legacy system integration with modern AI",
     ],
-    visualLabel: "Data Layer Placeholder",
+    image: "/services/ai-solutions/data-integration.jpg",
   },
   {
     title: "System Integrations & API Development",
@@ -68,7 +69,7 @@ const aiTracks = [
       "Third-party tool connections",
       "Webhook and event-driven automation",
     ],
-    visualLabel: "Integration Hub Placeholder",
+    image: "/services/ai-solutions/api-integration.jpg",
   },
   {
     title: "Cloud Infrastructure for AI Applications",
@@ -80,7 +81,7 @@ const aiTracks = [
       "Scalable cloud architecture for O&G data workloads",
       "DevOps and CI/CD pipelines",
     ],
-    visualLabel: "Cloud Stack Placeholder",
+    image: "/services/ai-solutions/cloud-infrastructure.jpg",
   },
   {
     title: "AI Automation Consulting",
@@ -93,7 +94,7 @@ const aiTracks = [
       "Automation roadmap design",
       "Technology selection and vendor evaluation",
     ],
-    visualLabel: "Roadmap Blueprint Placeholder",
+    image: "/services/ai-solutions/consulting.jpg",
   },
 ];
 
@@ -147,22 +148,21 @@ export default function AISolutionsPage() {
             className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6"
           >
             {aiTracks.map(
-              ({ title, description, bullets, Icon, visualLabel }) => (
+              ({ title, description, bullets, Icon, image }) => (
                 <AnimatedItem key={title}>
                   <article className="h-full rounded-2xl border border-quattro-border-dark bg-quattro-surface-dark overflow-hidden">
-                    <div className="p-5 sm:p-6 border-b border-quattro-border-dark bg-gradient-to-r from-quattro-primary/20 to-quattro-accent/10">
-                      <div className="flex items-center justify-between gap-3 mb-3">
-                        <div className="w-11 h-11 rounded-xl bg-quattro-primary/20 border border-quattro-primary/40 flex items-center justify-center">
-                          <Icon size={20} className="text-quattro-accent" />
+                    <div className="border-b border-quattro-border-dark bg-gradient-to-r from-quattro-primary/20 to-quattro-accent/10">
+                      <div className="relative h-40 w-full">
+                        <Image
+                          src={image}
+                          alt={title}
+                          fill
+                          className="object-cover"
+                        />
+                        <div className="absolute inset-0 bg-quattro-surface-dark/30" />
+                        <div className="absolute bottom-3 left-3 w-10 h-10 rounded-xl bg-quattro-primary/80 border border-quattro-primary/60 flex items-center justify-center backdrop-blur-sm">
+                          <Icon size={18} className="text-white" />
                         </div>
-                        <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-quattro-text-secondary">
-                          Placeholder Visual
-                        </span>
-                      </div>
-                      <div className="h-28 rounded-xl border border-quattro-primary/30 bg-[radial-gradient(circle_at_20%_20%,rgba(56,189,248,0.25),transparent_60%),radial-gradient(circle_at_80%_80%,rgba(23,84,154,0.3),transparent_55%),rgba(8,15,30,0.5)] flex items-end p-3">
-                        <span className="font-body text-xs text-quattro-text-secondary">
-                          {visualLabel}
-                        </span>
                       </div>
                     </div>
 

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import Image from "next/image";
 import { Code2, Monitor, BarChart3, Bot, ArrowRight } from "lucide-react";
 import TiltCard from "@/components/ui/TiltCard";
 import AnimatedSection, { AnimatedItem } from "@/components/ui/AnimatedSection";
@@ -14,6 +14,7 @@ const cards = [
     cta: "Explore AI Services",
     href: "/services/ai-solutions",
     glow: "rgba(14,165,233,0.32)",
+    image: "/services/ai-solutions.jpg",
   },
   {
     Icon: Code2,
@@ -22,6 +23,7 @@ const cards = [
     cta: "View Solutions",
     href: "/services/custom-applications",
     glow: "rgba(23,84,154,0.3)",
+    image: "/services/custom-applications.jpg",
   },
   {
     Icon: Monitor,
@@ -30,6 +32,7 @@ const cards = [
     cta: "See Designs",
     href: "/services/website-development",
     glow: "rgba(56,189,248,0.2)",
+    image: "/services/website-development.jpg",
   },
   {
     Icon: BarChart3,
@@ -38,6 +41,7 @@ const cards = [
     cta: "View Specifics",
     href: "/services/quickbooks",
     glow: "rgba(41,112,196,0.3)",
+    image: "/services/quickbooks.jpg",
   },
 ];
 
@@ -62,28 +66,34 @@ export default function ServicesGrid() {
           stagger
           className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 sm:gap-6"
         >
-          {cards.map(({ Icon, title, body, cta, href, glow }) => (
+          {cards.map(({ Icon, title, body, cta, href, glow, image }) => (
             <AnimatedItem key={title}>
               <TiltCard className="h-full">
                 <div
-                  className="h-full flex flex-col p-8 bg-quattro-surface-mid rounded-2xl border border-quattro-border-dark card-glow transition-all duration-300 group"
+                  className="h-full flex flex-col bg-quattro-surface-mid rounded-2xl border border-quattro-border-dark card-glow transition-all duration-300 group overflow-hidden"
                   style={{ boxShadow: `0 4px 30px rgba(0,0,0,0.3)` }}
                 >
-                  {/* Icon */}
-                  <div
-                    className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center mb-5 sm:mb-6 transition-all duration-300 group-hover:scale-110"
-                    style={{
-                      background: `linear-gradient(135deg, ${glow}, rgba(12,22,45,1))`,
-                      border: `1px solid ${glow}`,
-                    }}
-                  >
-                    <motion.div
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.6 }}
+                  {/* Image */}
+                  <div className="relative h-40 w-full shrink-0">
+                    <Image
+                      src={image}
+                      alt={title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-quattro-surface-mid/80" />
+                    <div
+                      className="absolute bottom-3 left-4 w-10 h-10 rounded-xl flex items-center justify-center"
+                      style={{
+                        background: `linear-gradient(135deg, ${glow}, rgba(12,22,45,0.9))`,
+                        border: `1px solid ${glow}`,
+                      }}
                     >
-                      <Icon size={24} color="rgb(56,189,248)" />
-                    </motion.div>
+                      <Icon size={20} color="rgb(56,189,248)" />
+                    </div>
                   </div>
+
+                  <div className="flex flex-col flex-1 p-6 sm:p-7">
 
                   <h3 className="font-display font-bold text-lg sm:text-xl text-white mb-3">
                     {title}
@@ -102,6 +112,7 @@ export default function ServicesGrid() {
                       className="transition-transform group-hover/link:translate-x-1"
                     />
                   </Link>
+                  </div>
                 </div>
               </TiltCard>
             </AnimatedItem>

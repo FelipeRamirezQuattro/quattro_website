@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AnimatedSection, { AnimatedItem } from "@/components/ui/AnimatedSection";
 import CTABanner from "@/components/sections/CTABanner";
 import { CheckCircle2 } from "lucide-react";
@@ -57,6 +58,19 @@ export default function ServicePageContent({ service, Icon, source }: Props) {
                 {service.description}
               </p>
             </AnimatedItem>
+            {service.image && (
+              <AnimatedItem>
+                <div className="relative h-56 sm:h-72 w-full rounded-2xl overflow-hidden mt-10 border border-quattro-border-dark">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-quattro-surface-dark/60 to-transparent" />
+                </div>
+              </AnimatedItem>
+            )}
           </AnimatedSection>
         </div>
       </section>

@@ -52,6 +52,7 @@ export interface Service {
   description: string;
   features: string[];
   href: string;
+  image?: string;
 }
 
 export interface Project {

@@ -6,6 +6,7 @@ export const services: Service[] = [
     slug: "ai-solutions",
     icon: "Bot",
     href: "/services/ai-solutions",
+    image: "/services/ai-solutions.jpg",
     description:
       "Quattro designs AI-powered systems that automate repetitive work, connect disconnected data sources, and help teams make faster operational decisions.",
     features: [
@@ -22,6 +23,7 @@ export const services: Service[] = [
     slug: "custom-applications",
     icon: "Code2",
     href: "/services/custom-applications",
+    image: "/services/custom-applications.jpg",
     description:
       "We create custom apps from the ground up, tailored to a company's processes, goals, and specific needs. This provides greater flexibility, scalability, and seamless integration with existing systems.",
     features: [
@@ -38,6 +40,7 @@ export const services: Service[] = [
     slug: "website-development",
     icon: "Globe",
     href: "/services/website-development",
+    image: "/services/website-development.jpg",
     description:
       "Partner with Quattro for cutting-edge web development solutions. Whether you are launching a new project or seeking to enhance your existing website, we are committed to bringing your vision to life.",
     features: [
@@ -54,6 +57,7 @@ export const services: Service[] = [
     slug: "quickbooks",
     icon: "BarChart3",
     href: "/services/quickbooks",
+    image: "/services/quickbooks.jpg",
     description:
       "Quattro specializes in developing tools that integrate financial management with QuickBooks. As leaders in QuickBooks Integration Development, Testing, and Support, we streamline financial workflows.",
     features: [
@@ -70,6 +74,7 @@ export const services: Service[] = [
     slug: "microsoft-power-apps",
     icon: "Layers",
     href: "/microsoft-power-apps",
+    image: "/services/microsoft-power-apps.jpg",
     description:
       "Extend your Microsoft 365 ecosystem with custom Power Apps solutions. We build low-code applications that connect seamlessly with your existing Microsoft infrastructure.",
     features: [
@@ -86,6 +91,7 @@ export const services: Service[] = [
     slug: "it-technical-support",
     icon: "Users",
     href: "/it-technical-support",
+    image: "/services/staffing-solutions.jpg",
     description:
       "Augment your team with skilled technical talent. Whether you need a dedicated developer, QA analyst, or IT specialist, Quattro provides vetted professionals who integrate seamlessly with your workflows.",
     features: [
