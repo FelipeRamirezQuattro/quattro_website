@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { insertNewsletterSubscriber, pool } from "@/lib/db";
 
 export async function POST(req: NextRequest) {
-  if (!supabase) {
+  if (!pool) {
     return NextResponse.json(
-      { error: "Supabase is not configured" },
+      { error: "Database is not configured" },
       { status: 500 },
     );
   }
@@ -30,18 +30,20 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const { error } = await supabase
-    .from("newsletter_subscribers")
-    .insert({ email: email.trim().toLowerCase(), name: name?.trim() || null });
+  try {
+    const { alreadySubscribed } = await insertNewsletterSubscriber(
+      email.trim().toLowerCase(),
+      name?.trim() || null,
+    );
 
-  if (error) {
-    if (error.code === "23505") {
+    if (alreadySubscribed) {
       return NextResponse.json(
         { message: "You're already subscribed!" },
         { status: 200 },
       );
     }
-    console.error("[newsletter API]", error.message);
+  } catch (error) {
+    console.error("[newsletter API]", (error as Error).message);
     return NextResponse.json(
       { error: "Failed to subscribe. Please try again." },
       { status: 500 },

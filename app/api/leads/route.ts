@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { insertLead, pool } from "@/lib/db";
 
 export async function POST(req: NextRequest) {
-  if (!supabase) {
+  if (!pool) {
     return NextResponse.json(
-      { error: "Supabase is not configured" },
+      { error: "Database is not configured" },
       { status: 500 },
     );
   }
@@ -35,18 +35,18 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const { error } = await supabase.from("leads").insert({
-    name: name.trim(),
-    email: email.trim().toLowerCase(),
-    phone: phone?.trim() || null,
-    company: company?.trim() || null,
-    service: service?.trim() || null,
-    message: message.trim(),
-    source: source || "website",
-  });
-
-  if (error) {
-    console.error("[leads API]", error.message);
+  try {
+    await insertLead({
+      name: name.trim(),
+      email: email.trim().toLowerCase(),
+      phone: phone?.trim() || undefined,
+      company: company?.trim() || undefined,
+      service: service?.trim() || undefined,
+      message: message.trim(),
+      source: source || "website",
+    });
+  } catch (error) {
+    console.error("[leads API]", (error as Error).message);
     return NextResponse.json(
       { error: "Failed to save your message. Please try again." },
       { status: 500 },

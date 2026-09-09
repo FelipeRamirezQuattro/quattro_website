@@ -6,17 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "migrate:blog": "tsx scripts/migrate-blog-posts.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
-    "@supabase/ssr": "^0.10.0",
-    "@supabase/supabase-js": "^2.101.1",
     "@types/uuid": "^10.0.0",
     "autoprefixer": "^10.4.27",
     "clsx": "^2.1.1",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.7.0",
+    "mysql2": "^3.15.2",
     "next": "16.2.2",
     "postcss": "^8.5.8",
     "react": "19.2.4",
@@ -34,6 +34,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.2",
+    "tsx": "^4.20.6",
     "typescript": "^5"
   }
 }

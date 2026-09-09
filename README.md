@@ -1,5 +1,25 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Database setup
+
+The app stores `leads`, `blog_posts`, and `newsletter_subscribers` in MySQL
+(deployed against the MySQL database on Hostinger Business Web Hosting).
+
+For local development, run a local MySQL instance (e.g.
+`docker run --name quattro-mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=quattro -p 3306:3306 -d mysql:8`
+or a native install), then load the schema once:
+
+```bash
+mysql -h 127.0.0.1 -u root quattro < db/schema.sql
+```
+
+Copy `.env.local.example` to `.env.local` and fill in `DB_HOST`, `DB_PORT`,
+`DB_USER`, `DB_PASSWORD`, `DB_NAME` (and `DB_SSL=true` if your MySQL requires
+TLS, as Hostinger's does for remote connections). Hostinger's remote MySQL
+access is typically restricted to IPs added in hPanel, so local dev should
+point at your own local database, not the production one — the app only
+needs a database it can run the same schema against.
+
 ## Getting Started
 
 First, run the development server:

@@ -3,37 +3,20 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import CTABanner from "@/components/sections/CTABanner";
-import { supabaseAdmin } from "@/lib/supabase-server";
+import { getBlogPostBySlug, getPublishedBlogSlugs } from "@/lib/db";
 import { formatDate, estimateReadTime } from "@/lib/utils";
-import type { BlogPost } from "@/types";
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
-async function getPost(slug: string): Promise<BlogPost | null> {
-  if (!supabaseAdmin) return null;
-
-  const { data, error } = await supabaseAdmin
-    .from("blog_posts")
-    .select("*")
-    .eq("slug", slug)
-    .eq("published", true)
-    .single();
-
-  if (error) return null;
-  return data;
+async function getPost(slug: string) {
+  return getBlogPostBySlug(slug);
 }
 
 export async function generateStaticParams() {
-  if (!supabaseAdmin) return [];
-
-  const { data } = await supabaseAdmin
-    .from("blog_posts")
-    .select("slug")
-    .eq("published", true);
-
-  return (data || []).map((row) => ({ slug: row.slug }));
+  const slugs = await getPublishedBlogSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
