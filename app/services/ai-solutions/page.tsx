@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import {
   Bot,
   Workflow,
@@ -29,7 +30,8 @@ const aiTracks = [
       "Form automation for permits, AFEs, and inspections",
       "Data extraction from unstructured sources (PDFs, emails, field reports)",
     ],
-    visualLabel: "Agent Console Placeholder",
+    visual:
+      "/images/legacy/trabajador-de-la-sala-de-servidores-supervisa-los-sistemas-de-ia-que-procesan-la-informacion.jpg",
   },
   {
     title: "Process Automation",
@@ -42,7 +44,7 @@ const aiTracks = [
       "Data entry elimination for high-volume forms",
       "Document generation from structured data",
     ],
-    visualLabel: "Workflow Map Placeholder",
+    visual: "/images/legacy/1.png",
   },
   {
     title: "AI-Powered Data Integration",
@@ -55,7 +57,8 @@ const aiTracks = [
       "Real-time operational data pipelines",
       "Legacy system integration with modern AI",
     ],
-    visualLabel: "Data Layer Placeholder",
+    visual:
+      "/images/legacy/fondo-de-almacenamiento-en-la-nube-diseno-de-redes-empresariales.jpg",
   },
   {
     title: "System Integrations & API Development",
@@ -68,7 +71,8 @@ const aiTracks = [
       "Third-party tool connections",
       "Webhook and event-driven automation",
     ],
-    visualLabel: "Integration Hub Placeholder",
+    visual:
+      "/images/legacy/concepto-de-gestion-de-relaciones-con-los-clientes.jpg",
   },
   {
     title: "Cloud Infrastructure for AI Applications",
@@ -80,7 +84,7 @@ const aiTracks = [
       "Scalable cloud architecture for O&G data workloads",
       "DevOps and CI/CD pipelines",
     ],
-    visualLabel: "Cloud Stack Placeholder",
+    visual: "/images/legacy/quickbooks-integration.png",
   },
   {
     title: "AI Automation Consulting",
@@ -93,7 +97,8 @@ const aiTracks = [
       "Automation roadmap design",
       "Technology selection and vendor evaluation",
     ],
-    visualLabel: "Roadmap Blueprint Placeholder",
+    visual:
+      "/images/legacy/gente-en-la-oficina-analizando-y-revisando-graficos-financieros.jpg",
   },
 ];
 
@@ -147,7 +152,7 @@ export default function AISolutionsPage() {
             className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6"
           >
             {aiTracks.map(
-              ({ title, description, bullets, Icon, visualLabel }) => (
+              ({ title, description, bullets, Icon, visual }) => (
                 <AnimatedItem key={title}>
                   <article className="h-full rounded-2xl border border-quattro-border-dark bg-quattro-surface-dark overflow-hidden">
                     <div className="p-5 sm:p-6 border-b border-quattro-border-dark bg-gradient-to-r from-quattro-primary/20 to-quattro-accent/10">
@@ -155,14 +160,14 @@ export default function AISolutionsPage() {
                         <div className="w-11 h-11 rounded-xl bg-quattro-primary/20 border border-quattro-primary/40 flex items-center justify-center">
                           <Icon size={20} className="text-quattro-accent" />
                         </div>
-                        <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-quattro-text-secondary">
-                          Placeholder Visual
-                        </span>
                       </div>
-                      <div className="h-28 rounded-xl border border-quattro-primary/30 bg-[radial-gradient(circle_at_20%_20%,rgba(56,189,248,0.25),transparent_60%),radial-gradient(circle_at_80%_80%,rgba(23,84,154,0.3),transparent_55%),rgba(8,15,30,0.5)] flex items-end p-3">
-                        <span className="font-body text-xs text-quattro-text-secondary">
-                          {visualLabel}
-                        </span>
+                      <div className="relative h-28 rounded-xl border border-quattro-primary/30 overflow-hidden">
+                        <Image
+                          src={visual}
+                          alt={title}
+                          fill
+                          className="object-cover"
+                        />
                       </div>
                     </div>
 

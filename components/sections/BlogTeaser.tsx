@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Calendar, ArrowRight } from "lucide-react";
@@ -60,36 +61,51 @@ export default function BlogTeaser() {
             <AnimatedSection stagger className="space-y-6">
               {displayPosts.map((post, i) => (
                 <AnimatedItem key={post.id || i}>
-                  <div className="p-6 rounded-2xl bg-quattro-surface-mid border border-quattro-border-dark hover:border-quattro-primary/50 transition-all group relative overflow-hidden">
-                    {/* Coming soon overlay */}
-                    {post.title === "Coming Soon" && (
-                      <div className="absolute top-3 right-3">
-                        <Badge variant="outline">Coming Soon</Badge>
-                      </div>
-                    )}
-                    {post.category && (
-                      <Badge className="mb-3">{post.category}</Badge>
-                    )}
-                    <h3 className="font-display font-bold text-white mb-2 group-hover:text-quattro-accent transition-colors">
-                      {post.title}
-                    </h3>
-                    <p className="font-body text-sm text-quattro-text-secondary mb-4 line-clamp-2">
-                      {post.excerpt}
-                    </p>
-                    {post.published_at && (
-                      <div className="flex items-center gap-1.5 text-xs text-quattro-text-secondary/60">
-                        <Calendar size={12} />
-                        {formatDate(post.published_at)}
-                      </div>
-                    )}
-                    {post.slug && post.title !== "Coming Soon" && (
-                      <Link
-                        href={`/blog/${post.slug}`}
-                        className="inline-flex items-center gap-1 text-quattro-accent text-xs mt-3 hover:gap-2 transition-all"
-                      >
-                        Read More <ArrowRight size={12} />
-                      </Link>
-                    )}
+                  <div className="rounded-2xl bg-quattro-surface-mid border border-quattro-border-dark hover:border-quattro-primary/50 transition-all group relative overflow-hidden flex gap-5">
+                    <div className="relative w-28 sm:w-36 shrink-0 bg-quattro-surface-dark">
+                      {post.cover_image ? (
+                        <Image
+                          src={post.cover_image}
+                          alt={post.title || ""}
+                          fill
+                          className="object-cover"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 gradient-mesh opacity-40" />
+                      )}
+                    </div>
+
+                    <div className="py-6 pr-6 flex-1 min-w-0">
+                      {/* Coming soon overlay */}
+                      {post.title === "Coming Soon" && (
+                        <div className="absolute top-3 right-3">
+                          <Badge variant="outline">Coming Soon</Badge>
+                        </div>
+                      )}
+                      {post.category && (
+                        <Badge className="mb-3">{post.category}</Badge>
+                      )}
+                      <h3 className="font-display font-bold text-white mb-2 group-hover:text-quattro-accent transition-colors">
+                        {post.title}
+                      </h3>
+                      <p className="font-body text-sm text-quattro-text-secondary mb-4 line-clamp-2">
+                        {post.excerpt}
+                      </p>
+                      {post.published_at && (
+                        <div className="flex items-center gap-1.5 text-xs text-quattro-text-secondary/60">
+                          <Calendar size={12} />
+                          {formatDate(post.published_at)}
+                        </div>
+                      )}
+                      {post.slug && post.title !== "Coming Soon" && (
+                        <Link
+                          href={`/blog/${post.slug}`}
+                          className="inline-flex items-center gap-1 text-quattro-accent text-xs mt-3 hover:gap-2 transition-all"
+                        >
+                          Read More <ArrowRight size={12} />
+                        </Link>
+                      )}
+                    </div>
                   </div>
                 </AnimatedItem>
               ))}

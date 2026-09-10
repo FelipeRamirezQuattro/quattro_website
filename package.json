@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "migrate:blog": "tsx scripts/migrate-blog-posts.ts"
+    "migrate:blog": "tsx scripts/migrate-blog-posts.ts",
+    "fetch:images": "tsx scripts/fetch-legacy-images.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

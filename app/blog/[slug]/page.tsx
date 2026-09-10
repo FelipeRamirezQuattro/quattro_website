@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -73,6 +74,22 @@ export default async function BlogDetailPage({ params }: Props) {
           </p>
         </div>
       </section>
+
+      {post.cover_image && (
+        <section className="bg-quattro-surface-mid">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative">
+            <div className="relative h-64 sm:h-96 rounded-2xl overflow-hidden border border-quattro-border-dark">
+              <Image
+                src={post.cover_image}
+                alt={post.title}
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="py-14 bg-quattro-surface-mid">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[1fr_260px] gap-10">

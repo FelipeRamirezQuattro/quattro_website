@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { BlogPost } from "@/types";
@@ -54,6 +55,7 @@ export default function BlogListingClient() {
           content: "",
           author: "Quattro Team",
           published: true,
+          cover_image: undefined,
           category: activeCategory === "All" ? "Engineering" : activeCategory,
         }));
 
@@ -90,31 +92,46 @@ export default function BlogListingClient() {
             {displayPosts.map((post) => (
               <article
                 key={post.id}
-                className="rounded-2xl border border-quattro-border-dark bg-quattro-surface-dark p-5 sm:p-6
+                className="rounded-2xl border border-quattro-border-dark bg-quattro-surface-dark overflow-hidden
                            hover:border-quattro-primary/50 transition-all"
               >
-                <p className="font-mono text-xs text-quattro-accent mb-2 uppercase tracking-wide">
-                  {post.category || "Engineering"}
-                </p>
-                <h2 className="font-display text-lg sm:text-xl text-white font-bold mb-3 min-h-12 sm:min-h-14">
-                  {post.title}
-                </h2>
-                <p className="font-body text-sm text-quattro-text-secondary leading-relaxed mb-5 min-h-16">
-                  {post.excerpt}
-                </p>
-                {post.slug === "#" ? (
-                  <span className="inline-flex items-center gap-2 text-sm font-body text-quattro-text-secondary">
-                    Publishing soon
-                  </span>
-                ) : (
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="inline-flex items-center gap-2 text-sm font-body text-quattro-accent hover:text-quattro-accent-2 transition-colors"
-                  >
-                    Read article
-                    <ArrowUpRight size={14} />
-                  </Link>
-                )}
+                <div className="relative h-40 bg-quattro-surface-mid">
+                  {post.cover_image ? (
+                    <Image
+                      src={post.cover_image}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 gradient-mesh opacity-40" />
+                  )}
+                </div>
+
+                <div className="p-5 sm:p-6">
+                  <p className="font-mono text-xs text-quattro-accent mb-2 uppercase tracking-wide">
+                    {post.category || "Engineering"}
+                  </p>
+                  <h2 className="font-display text-lg sm:text-xl text-white font-bold mb-3 min-h-12 sm:min-h-14">
+                    {post.title}
+                  </h2>
+                  <p className="font-body text-sm text-quattro-text-secondary leading-relaxed mb-5 min-h-16">
+                    {post.excerpt}
+                  </p>
+                  {post.slug === "#" ? (
+                    <span className="inline-flex items-center gap-2 text-sm font-body text-quattro-text-secondary">
+                      Publishing soon
+                    </span>
+                  ) : (
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="inline-flex items-center gap-2 text-sm font-body text-quattro-accent hover:text-quattro-accent-2 transition-colors"
+                    >
+                      Read article
+                      <ArrowUpRight size={14} />
+                    </Link>
+                  )}
+                </div>
               </article>
             ))}
           </div>

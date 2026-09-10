@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
@@ -75,23 +76,35 @@ export default async function ShowcaseDetailPage({ params }: Props) {
         </div>
       </section>
 
-      {/* ── Gradient image placeholder ─────────────────────────────── */}
+      {/* ── Project image ──────────────────────────────────────────── */}
       <section className="bg-quattro-surface-mid py-12">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <AnimatedItem>
               <div
-                className={`rounded-2xl overflow-hidden bg-gradient-to-br ${project.gradient}
-                            h-72 sm:h-96 flex items-center justify-center border border-quattro-border-dark`}
+                className={`relative rounded-2xl overflow-hidden bg-gradient-to-br ${project.gradient}
+                            h-72 sm:h-96 border border-quattro-border-dark`}
               >
-                <div className="text-center">
-                  <p className="font-display font-bold text-3xl sm:text-4xl text-white/80 mb-2">
-                    {project.title}
-                  </p>
-                  <p className="font-mono text-white/50 text-sm">
-                    Project Showcase
-                  </p>
-                </div>
+                {project.imageUrl ? (
+                  <Image
+                    src={project.imageUrl}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center">
+                      <p className="font-display font-bold text-3xl sm:text-4xl text-white/80 mb-2">
+                        {project.title}
+                      </p>
+                      <p className="font-mono text-white/50 text-sm">
+                        Project Showcase
+                      </p>
+                    </div>
+                  </div>
+                )}
               </div>
             </AnimatedItem>
           </AnimatedSection>

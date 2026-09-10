@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
@@ -63,8 +64,17 @@ export default function ShowcaseGridClient() {
                 >
                   <div className="rounded-2xl overflow-hidden border border-quattro-border-dark hover:border-quattro-primary/50 transition-all duration-300 hover:-translate-y-1">
                     <div
-                      className={`h-52 bg-gradient-to-br ${project.gradient} relative`}
+                      className={`h-52 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}
                     >
+                      {project.imageUrl && (
+                        <Image
+                          src={project.imageUrl}
+                          alt={project.title}
+                          fill
+                          className="object-cover"
+                        />
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                       <div className="absolute inset-0 flex items-end p-6">
                         <div className="flex flex-wrap gap-2">
                           {project.categories.map((category) => (
