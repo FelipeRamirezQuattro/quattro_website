@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AnimatedSection, { AnimatedItem } from "@/components/ui/AnimatedSection";
 import CTABanner from "@/components/sections/CTABanner";
 import { CheckCircle2 } from "lucide-react";
@@ -36,28 +37,62 @@ export default function ServicePageContent({ service, Icon, source }: Props) {
         <div className="absolute inset-0 gradient-mesh opacity-30 pointer-events-none" />
         <div className="absolute inset-0 grid-overlay opacity-15 pointer-events-none" />
 
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <AnimatedSection>
-            <AnimatedItem>
-              {/* Icon */}
-              <div
-                className="w-16 h-16 rounded-2xl bg-quattro-primary/20 flex items-center justify-center mb-8
-                              border border-quattro-primary/40"
-              >
-                <Icon size={30} className="text-quattro-accent" />
-              </div>
-            </AnimatedItem>
-            <AnimatedItem>
-              <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-6">
-                {service.title}
-              </h1>
-            </AnimatedItem>
-            <AnimatedItem>
-              <p className="font-body text-quattro-text-secondary text-lg sm:text-xl max-w-2xl">
-                {service.description}
-              </p>
-            </AnimatedItem>
-          </AnimatedSection>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div
+            className={`grid grid-cols-1 ${service.heroImage ? "lg:grid-cols-2 lg:gap-12" : ""} items-center`}
+          >
+            <AnimatedSection>
+              <AnimatedItem>
+                {/* Icon */}
+                <div
+                  className="w-16 h-16 rounded-2xl bg-quattro-primary/20 flex items-center justify-center mb-8
+                                border border-quattro-primary/40"
+                >
+                  <Icon size={30} className="text-quattro-accent" />
+                </div>
+              </AnimatedItem>
+              <AnimatedItem>
+                <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-6">
+                  {service.title}
+                </h1>
+              </AnimatedItem>
+              <AnimatedItem>
+                <p className="font-body text-quattro-text-secondary text-lg sm:text-xl max-w-2xl">
+                  {service.description}
+                </p>
+              </AnimatedItem>
+            </AnimatedSection>
+
+            {service.heroImage && (
+              <AnimatedSection direction="right" className="mt-10 lg:mt-0">
+                <AnimatedItem direction="right">
+                  <div
+                    className={`relative h-64 sm:h-80 lg:h-96 rounded-2xl border border-quattro-border-dark overflow-hidden ${
+                      service.heroImageFit === "contain"
+                        ? "bg-quattro-surface-dark p-8"
+                        : ""
+                    }`}
+                  >
+                    <Image
+                      src={service.heroImage}
+                      alt={service.title}
+                      fill
+                      sizes="(min-width: 1024px) 50vw, 100vw"
+                      className={
+                        service.heroImageFit === "contain"
+                          ? "object-contain"
+                          : "object-cover"
+                      }
+                      priority
+                    />
+                    {service.heroImageFit !== "contain" && (
+                      <div className="absolute inset-0 bg-gradient-to-t from-quattro-surface-dark/40 to-transparent" />
+                    )}
+                  </div>
+                </AnimatedItem>
+              </AnimatedSection>
+            )}
+          </div>
         </div>
       </section>
 

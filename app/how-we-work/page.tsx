@@ -113,9 +113,9 @@ export default function HowWeWorkPage() {
             className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8"
           >
             {overviewCards.map((card) => (
-              <AnimatedItem key={card.title}>
+              <AnimatedItem key={card.title} className="h-full">
                 <div
-                  className="p-7 rounded-2xl bg-quattro-surface-dark border border-quattro-border-dark
+                  className="h-full flex flex-col p-7 rounded-2xl bg-quattro-surface-dark border border-quattro-border-dark
                                 hover:border-quattro-primary/50 transition-colors group"
                 >
                   <div

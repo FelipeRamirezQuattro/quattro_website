@@ -112,7 +112,7 @@ export default function ContactForm() {
             <Field label="Full Name" error={errors.name?.message}>
               <input
                 {...register("name")}
-                className="w-full h-11 px-3 rounded-lg border border-quattro-border-light focus:outline-none focus:ring-2 focus:ring-quattro-primary/30"
+                className="w-full h-11 px-3 rounded-lg border border-quattro-border-light bg-white text-quattro-text-dark placeholder:text-slate-400 [color-scheme:light] focus:outline-none focus:ring-2 focus:ring-quattro-primary/30 focus:border-quattro-primary"
               />
             </Field>
 
@@ -120,7 +120,7 @@ export default function ContactForm() {
               <input
                 type="email"
                 {...register("email")}
-                className="w-full h-11 px-3 rounded-lg border border-quattro-border-light focus:outline-none focus:ring-2 focus:ring-quattro-primary/30"
+                className="w-full h-11 px-3 rounded-lg border border-quattro-border-light bg-white text-quattro-text-dark placeholder:text-slate-400 [color-scheme:light] focus:outline-none focus:ring-2 focus:ring-quattro-primary/30 focus:border-quattro-primary"
               />
             </Field>
           </div>
@@ -129,14 +129,14 @@ export default function ContactForm() {
             <Field label="Phone" error={errors.phone?.message}>
               <input
                 {...register("phone")}
-                className="w-full h-11 px-3 rounded-lg border border-quattro-border-light focus:outline-none focus:ring-2 focus:ring-quattro-primary/30"
+                className="w-full h-11 px-3 rounded-lg border border-quattro-border-light bg-white text-quattro-text-dark placeholder:text-slate-400 [color-scheme:light] focus:outline-none focus:ring-2 focus:ring-quattro-primary/30 focus:border-quattro-primary"
               />
             </Field>
 
             <Field label="Company" error={errors.company?.message}>
               <input
                 {...register("company")}
-                className="w-full h-11 px-3 rounded-lg border border-quattro-border-light focus:outline-none focus:ring-2 focus:ring-quattro-primary/30"
+                className="w-full h-11 px-3 rounded-lg border border-quattro-border-light bg-white text-quattro-text-dark placeholder:text-slate-400 [color-scheme:light] focus:outline-none focus:ring-2 focus:ring-quattro-primary/30 focus:border-quattro-primary"
               />
             </Field>
           </div>
@@ -144,7 +144,7 @@ export default function ContactForm() {
           <Field label="Service" error={errors.service?.message}>
             <select
               {...register("service")}
-              className="w-full h-11 px-3 rounded-lg border border-quattro-border-light bg-white focus:outline-none focus:ring-2 focus:ring-quattro-primary/30"
+              className="w-full h-11 px-3 rounded-lg border border-quattro-border-light bg-white text-quattro-text-dark [color-scheme:light] focus:outline-none focus:ring-2 focus:ring-quattro-primary/30 focus:border-quattro-primary"
             >
               <option value="">Select a service</option>
               {serviceOptions.map((service) => (
@@ -159,7 +159,7 @@ export default function ContactForm() {
             <textarea
               rows={5}
               {...register("message")}
-              className="w-full px-3 py-2 rounded-lg border border-quattro-border-light focus:outline-none focus:ring-2 focus:ring-quattro-primary/30"
+              className="w-full px-3 py-2 rounded-lg border border-quattro-border-light bg-white text-quattro-text-dark placeholder:text-slate-400 [color-scheme:light] focus:outline-none focus:ring-2 focus:ring-quattro-primary/30 focus:border-quattro-primary"
             />
           </Field>
 

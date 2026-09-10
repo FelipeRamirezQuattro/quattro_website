@@ -29,15 +29,6 @@ export const projects: Project[] = [
     imageUrl: "/images/legacy/modern-website-design-.png",
   },
   {
-    title: "The Flutefinder",
-    slug: "flutefinder",
-    categories: ["Web Development"],
-    description:
-      "A music-focused web application helping musicians discover and compare flutes with an intuitive search experience.",
-    gradient: "from-purple-800 to-quattro-primary",
-    imageUrl: "/images/legacy/web-applications.png",
-  },
-  {
     title: "Crystin Manufacturing",
     slug: "crystin-manufacturing",
     categories: ["App Development"],

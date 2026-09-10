@@ -52,6 +52,8 @@ export interface Service {
   description: string;
   features: string[];
   href: string;
+  heroImage?: string;
+  heroImageFit?: "cover" | "contain";
 }
 
 export interface Project {
@@ -74,13 +76,6 @@ export interface Value {
   title: string;
   icon: string;
   description: string;
-}
-
-export interface Stat {
-  value: number;
-  suffix: string;
-  label: string;
-  icon: string;
 }
 
 export interface NavItem {

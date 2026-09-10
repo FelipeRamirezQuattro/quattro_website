@@ -2,19 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import type { ElementType } from "react";
 import { Zap, ArrowRight, Play } from "lucide-react";
 import Badge from "@/components/ui/Badge";
-import CountUpNumber from "@/components/ui/CountUpNumber";
-import { stats } from "@/data/stats";
-import * as LucideIcons from "lucide-react";
-
-// Map icon name string → Lucide component
-type IconName = keyof typeof LucideIcons;
-function Icon({ name, size = 20 }: { name: string; size?: number }) {
-  const Comp = LucideIcons[name as IconName] as ElementType;
-  return Comp ? <Comp size={size} /> : null;
-}
 
 const headline = ["Crafting", "Code,", "Creating", "Solutions"];
 
@@ -122,31 +111,6 @@ export default function HeroSection() {
           >
             <Play size={16} /> View Our Work
           </Link>
-        </motion.div>
-
-        {/* Stat counters */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.9, duration: 0.6 }}
-          className="grid grid-cols-2 gap-4 sm:gap-6 max-w-md mx-auto"
-        >
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="flex flex-col items-center p-3.5 sm:p-4 rounded-2xl bg-quattro-surface-mid/60 border border-quattro-border-dark"
-            >
-              <div className="text-quattro-accent mb-1">
-                <Icon name={stat.icon} size={18} />
-              </div>
-              <div className="font-display font-bold text-xl sm:text-3xl text-white">
-                <CountUpNumber target={stat.value} suffix={stat.suffix} />
-              </div>
-              <div className="font-body text-xs text-quattro-text-secondary text-center mt-1">
-                {stat.label}
-              </div>
-            </div>
-          ))}
         </motion.div>
       </div>
 

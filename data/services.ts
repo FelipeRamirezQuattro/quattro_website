@@ -32,6 +32,7 @@ export const services: Service[] = [
       "Custom UI/UX",
       "Ongoing Support",
     ],
+    heroImage: "/images/legacy/application-development.png",
   },
   {
     title: "Modern Website Design",
@@ -48,6 +49,7 @@ export const services: Service[] = [
       "Brand-Aligned",
       "Conversion Focused",
     ],
+    heroImage: "/images/legacy/modern-website-design-.png",
   },
   {
     title: "QuickBooks Integration Apps",
@@ -64,6 +66,7 @@ export const services: Service[] = [
       "Multi-company Support",
       "QBO & Desktop",
     ],
+    heroImage: "/images/legacy/quickbooks-integration.png",
   },
   {
     title: "Microsoft Power Apps",
@@ -80,6 +83,8 @@ export const services: Service[] = [
       "Custom Connectors",
       "Rapid Deployment",
     ],
+    heroImage: "/images/legacy/microsoft-powerapps.png",
+    heroImageFit: "contain",
   },
   {
     title: "Staffing Solutions",
@@ -96,5 +101,7 @@ export const services: Service[] = [
       "Fast Onboarding",
       "Ongoing Management",
     ],
+    heroImage:
+      "/images/legacy/guy-muestra-documento-una-nina-grupo-de-jovenes-autonomos-en-la-oficina-conversando-y-trabajando.jpg",
   },
 ];

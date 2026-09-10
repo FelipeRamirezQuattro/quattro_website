@@ -155,19 +155,17 @@ export default function AISolutionsPage() {
               ({ title, description, bullets, Icon, visual }) => (
                 <AnimatedItem key={title}>
                   <article className="h-full rounded-2xl border border-quattro-border-dark bg-quattro-surface-dark overflow-hidden">
-                    <div className="p-5 sm:p-6 border-b border-quattro-border-dark bg-gradient-to-r from-quattro-primary/20 to-quattro-accent/10">
-                      <div className="flex items-center justify-between gap-3 mb-3">
-                        <div className="w-11 h-11 rounded-xl bg-quattro-primary/20 border border-quattro-primary/40 flex items-center justify-center">
-                          <Icon size={20} className="text-quattro-accent" />
-                        </div>
-                      </div>
-                      <div className="relative h-28 rounded-xl border border-quattro-primary/30 overflow-hidden">
-                        <Image
-                          src={visual}
-                          alt={title}
-                          fill
-                          className="object-cover"
-                        />
+                    <div className="relative h-56 sm:h-64 overflow-hidden">
+                      <Image
+                        src={visual}
+                        alt={title}
+                        fill
+                        sizes="(min-width: 768px) 50vw, 100vw"
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-quattro-surface-dark via-quattro-surface-dark/10 to-transparent" />
+                      <div className="absolute top-4 left-4 w-11 h-11 rounded-xl bg-quattro-primary/30 backdrop-blur-sm border border-quattro-primary/50 flex items-center justify-center">
+                        <Icon size={20} className="text-white" />
                       </div>
                     </div>
 
