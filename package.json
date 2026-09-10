@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "migrate:blog": "tsx scripts/migrate-blog-posts.ts",
-    "fetch:images": "tsx scripts/fetch-legacy-images.ts"
+    "fetch:images": "tsx scripts/fetch-legacy-images.ts",
+    "test:visual": "playwright test",
+    "test:visual:update": "playwright test --update-snapshots"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -30,6 +32,7 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

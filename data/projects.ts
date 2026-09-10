@@ -2,64 +2,6 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    title: "DocFlow Agent Suite",
-    slug: "docflow-agent-suite",
-    categories: ["AI Solutions", "AI Agent Development"],
-    description:
-      "An AI agent suite that processes operational documents, extracts key fields, and generates compliance-ready outputs for distributed teams.",
-    gradient: "from-cyan-700 to-quattro-primary-dark",
-    imageUrl:
-      "/images/legacy/pagina-de-inicio-de-conexion-de-portatil-de-documentos-de-envio.jpg",
-  },
-  {
-    title: "OpsPilot Automation",
-    slug: "opspilot-automation",
-    categories: ["AI Solutions", "Process Automation"],
-    description:
-      "A workflow automation platform that eliminates repetitive data entry, auto-generates operational documents, and streamlines back-office coordination.",
-    gradient: "from-sky-700 to-indigo-800",
-    imageUrl: "/images/legacy/1.png",
-  },
-  {
-    title: "Unified Energy Data Layer",
-    slug: "unified-energy-data-layer",
-    categories: ["AI Solutions", "AI-Powered Data Integration"],
-    description:
-      "A real-time AI data layer that centralizes fragmented ERP and field systems into one operational view for analytics and decision support.",
-    gradient: "from-blue-800 to-emerald-700",
-    imageUrl:
-      "/images/legacy/trabajador-de-la-sala-de-servidores-supervisa-los-sistemas-de-ia-que-procesan-la-informacion.jpg",
-  },
-  {
-    title: "CoreConnect API Hub",
-    slug: "coreconnect-api-hub",
-    categories: ["AI Solutions", "System Integrations"],
-    description:
-      "An integration and API framework connecting SAP, Oracle, QuickBooks, and third-party tools through resilient REST and webhook pipelines.",
-    gradient: "from-indigo-800 to-quattro-primary",
-    imageUrl:
-      "/images/legacy/concepto-de-gestion-de-relaciones-con-los-clientes-1.jpg",
-  },
-  {
-    title: "Atlas AI Runtime",
-    slug: "atlas-ai-runtime",
-    categories: ["AI Solutions", "Cloud Infrastructure"],
-    description:
-      "Scalable cloud infrastructure for AI applications, including CI/CD delivery pipelines and high-throughput workloads for oil and gas operations.",
-    gradient: "from-slate-800 to-sky-700",
-    imageUrl: "/images/legacy/trade06.jpg",
-  },
-  {
-    title: "Automation Readiness Program",
-    slug: "automation-readiness-program",
-    categories: ["AI Solutions", "AI Consulting"],
-    description:
-      "A consulting engagement that maps automation opportunities, evaluates technology options, and defines a phased AI execution roadmap.",
-    gradient: "from-violet-800 to-quattro-primary-dark",
-    imageUrl:
-      "/images/legacy/gente-en-la-oficina-analizando-y-revisando-graficos-financieros.jpg",
-  },
-  {
     title: "Inwest",
     slug: "inwest",
     categories: ["Web Development"],

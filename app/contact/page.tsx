@@ -20,22 +20,34 @@ const contactItems = [
   {
     icon: Phone,
     label: "Phone",
-    value: "(630) 338-2774",
-    href: "tel:+16303382774",
+    value: "(432) 363-4009",
+    href: "tel:+14323634009",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "sales@quattrosoftware.com",
-    href: "mailto:sales@quattrosoftware.com",
+    value: "info@quattroapps.com",
+    href: "mailto:info@quattroapps.com",
   },
   { icon: MapPin, label: "Location", value: "United States", href: "#" },
 ];
 
 const socialLinks = [
-  { icon: MessageCircle, label: "Facebook", href: "#" },
-  { icon: Users, label: "LinkedIn", href: "#" },
-  { icon: PlayCircle, label: "YouTube", href: "#" },
+  {
+    icon: MessageCircle,
+    label: "Facebook",
+    href: "https://www.facebook.com/quattroapps",
+  },
+  {
+    icon: Users,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/quattro-apps/",
+  },
+  {
+    icon: PlayCircle,
+    label: "YouTube",
+    href: "https://www.youtube.com/@QuattroSoftware",
+  },
 ];
 
 export default function ContactPage() {
@@ -96,6 +108,8 @@ export default function ContactPage() {
                   <a
                     key={social.label}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={social.label}
                     className="w-10 h-10 rounded-full border border-quattro-border-dark bg-quattro-surface-mid
                                hover:border-quattro-accent hover:text-quattro-accent flex items-center justify-center transition-colors"

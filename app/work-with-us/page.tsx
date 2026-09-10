@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Briefcase, CheckCircle2 } from "lucide-react";
+import { Users } from "lucide-react";
 import CareerApplyForm from "@/components/sections/CareerApplyForm";
 import CTABanner from "@/components/sections/CTABanner";
 
@@ -8,49 +8,6 @@ export const metadata: Metadata = {
   description:
     "Explore career opportunities at Quattro Software and join a team focused on integrity, craftsmanship, and real client impact.",
 };
-
-const positions = [
-  {
-    title: "Senior Full Stack Developer",
-    type: "Full-time",
-    location: "Remote / Hybrid",
-    points: [
-      "TypeScript and Node.js proficiency",
-      "Experience building scalable web apps",
-      "Strong communication and ownership",
-    ],
-  },
-  {
-    title: "QA Analyst",
-    type: "Full-time",
-    location: "Remote",
-    points: [
-      "Manual and automation testing",
-      "Test case design and regression planning",
-      "Attention to detail and process discipline",
-    ],
-  },
-  {
-    title: "UI/UX Designer",
-    type: "Contract / Full-time",
-    location: "Remote",
-    points: [
-      "Modern web interface design",
-      "Design systems and interaction thinking",
-      "Collaboration with dev and product teams",
-    ],
-  },
-  {
-    title: "Sales Specialist",
-    type: "Full-time",
-    location: "Hybrid",
-    points: [
-      "B2B software sales experience",
-      "Strong discovery and consultative skills",
-      "Comfort with CRM and pipeline management",
-    ],
-  },
-];
 
 const cultureValues = [
   "Integrity in every interaction",
@@ -83,40 +40,23 @@ export default function WorkWithUsPage() {
       <section className="py-16 sm:py-20 bg-quattro-surface-mid">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-8">
           <div className="space-y-5">
-            {positions.map((position) => (
-              <article
-                key={position.title}
-                className="rounded-2xl border border-quattro-border-dark bg-quattro-surface-dark p-5 sm:p-6"
-              >
-                <div className="flex items-start justify-between gap-4 mb-4">
-                  <div>
-                    <h2 className="font-display text-xl sm:text-2xl text-white font-bold">
-                      {position.title}
-                    </h2>
-                    <p className="font-mono text-xs text-quattro-accent uppercase tracking-wide mt-1">
-                      {position.type} · {position.location}
-                    </p>
-                  </div>
-                  <div className="w-10 h-10 rounded-xl border border-quattro-primary/40 bg-quattro-primary/20 flex items-center justify-center">
-                    <Briefcase size={18} className="text-quattro-accent" />
-                  </div>
+            <article className="rounded-2xl border border-quattro-border-dark bg-quattro-surface-dark p-5 sm:p-6">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-10 h-10 rounded-xl border border-quattro-primary/40 bg-quattro-primary/20 flex items-center justify-center shrink-0">
+                  <Users size={18} className="text-quattro-accent" />
                 </div>
-                <ul className="space-y-2">
-                  {position.points.map((point) => (
-                    <li
-                      key={point}
-                      className="flex items-start gap-2 text-quattro-text-secondary text-sm"
-                    >
-                      <CheckCircle2
-                        size={16}
-                        className="text-quattro-accent shrink-0 mt-0.5"
-                      />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </article>
-            ))}
+                <h2 className="font-display text-xl sm:text-2xl text-white font-bold">
+                  We&#39;re Always Looking for Great People
+                </h2>
+              </div>
+              <p className="text-quattro-text-secondary text-sm leading-relaxed">
+                We don&#39;t have specific openings posted right now, but
+                we&#39;re always interested in connecting with talented
+                developers, QA specialists, designers, and other
+                professionals who share our values. Tell us about yourself
+                below and we&#39;ll reach out if there&#39;s a fit.
+              </p>
+            </article>
 
             <div className="rounded-2xl border border-quattro-border-dark bg-quattro-surface-dark p-5 sm:p-6">
               <h3 className="font-display text-white text-xl font-bold mb-3">

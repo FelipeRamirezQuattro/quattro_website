@@ -9,7 +9,6 @@ import { projects } from "@/data/projects";
 
 const allCategories = [
   "All",
-  "AI Solutions",
   "App Development",
   "QuickBooks Integrations",
   "Web Development",

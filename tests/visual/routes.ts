@@ -1,0 +1,15 @@
+export const routes = [
+  { name: "home", path: "/" },
+  { name: "about", path: "/about" },
+  { name: "contact", path: "/contact" },
+  { name: "how-we-work", path: "/how-we-work" },
+  { name: "it-technical-support", path: "/it-technical-support" },
+  { name: "microsoft-power-apps", path: "/microsoft-power-apps" },
+  { name: "services-ai-solutions", path: "/services/ai-solutions" },
+  { name: "services-custom-applications", path: "/services/custom-applications" },
+  { name: "services-quickbooks", path: "/services/quickbooks" },
+  { name: "services-website-development", path: "/services/website-development" },
+  { name: "showcase", path: "/showcase" },
+  { name: "showcase-project", path: "/showcase/inwest" },
+  { name: "work-with-us", path: "/work-with-us" },
+];

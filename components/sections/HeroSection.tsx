@@ -129,7 +129,7 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.6 }}
-          className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-2xl mx-auto"
+          className="grid grid-cols-2 gap-4 sm:gap-6 max-w-md mx-auto"
         >
           {stats.map((stat) => (
             <div
