@@ -57,4 +57,46 @@ export const projects: Project[] = [
     gradient: "from-quattro-primary-dark to-indigo-800",
     imageUrl: "/images/legacy/pfs.png",
   },
+  {
+    title: "CareCompanion",
+    slug: "carecompanion",
+    categories: ["App Development", "Family Care"],
+    description:
+      "A shared care journal the whole family can rely on. Every medication, meal, pain reading, blood pressure check and physical activity is logged in seconds and visible to everyone on the care team, instantly, from any device.",
+    gradient: "from-teal-700 to-quattro-primary",
+  },
+  {
+    title: "Family Garage",
+    slug: "family-garage",
+    categories: ["App Development", "Automotive"],
+    description:
+      "A shared digital glovebox for the entire household: one place to track every vehicle, every service and every repair, so nothing slips through the cracks.",
+    gradient: "from-slate-700 to-quattro-primary",
+  },
+  {
+    title: "RetroPilot",
+    slug: "retropilot",
+    categories: ["App Development", "Productivity"],
+    description:
+      "A nostalgic, lightweight personal digital assistant with a classic 90s interface for managing sticky notes, contacts, tasks, your calendar, a private journal and quick calculations, with file attachments, PDF export and zero distractions. No feeds. No pings. No algorithms. Just your day.",
+    gradient: "from-emerald-800 to-quattro-primary-dark",
+  },
+  {
+    // TODO(felipe): "CRM" is a placeholder; confirm the product's public name.
+    title: "CRM",
+    slug: "crm",
+    categories: ["App Development", "Business Software"],
+    description:
+      "A project-centric CRM that keeps customers, contacts, projects, tasks and to-dos in one dashboard, with reusable project templates and two-way Google sync.",
+    gradient: "from-quattro-primary to-sky-700",
+  },
+  {
+    // TODO(felipe): "Factoring" is a placeholder; confirm the product's public name.
+    title: "Factoring",
+    slug: "factoring",
+    categories: ["App Development", "Fintech"],
+    description:
+      "An invoice factoring assistant that identifies and marks the invoices being factored, prepares the schedule for the factoring company, and builds the accounting entries automatically.",
+    gradient: "from-quattro-primary-dark to-indigo-800",
+  },
 ];
