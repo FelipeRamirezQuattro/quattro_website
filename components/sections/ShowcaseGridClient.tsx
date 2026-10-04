@@ -48,22 +48,23 @@ export default function ShowcaseGridClient() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-5 sm:gap-6"
           >
             {filtered.map((project, i) => (
               <motion.div
                 key={project.slug}
+                className="h-full"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: i * 0.07 }}
               >
                 <Link
                   href={`/showcase/${project.slug}`}
-                  className="group block"
+                  className="group block h-full"
                 >
-                  <div className="rounded-2xl overflow-hidden border border-quattro-border-dark hover:border-quattro-primary/50 transition-all duration-300 hover:-translate-y-1">
+                  <div className="flex h-full flex-col rounded-2xl overflow-hidden border border-quattro-border-dark hover:border-quattro-primary/50 transition-all duration-300 hover:-translate-y-1">
                     <div
-                      className={`h-52 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}
+                      className={`h-52 shrink-0 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}
                     >
                       {project.imageUrl && (
                         <Image
@@ -91,11 +92,11 @@ export default function ShowcaseGridClient() {
                       </div>
                     </div>
 
-                    <div className="p-5 sm:p-6 bg-quattro-surface-dark">
+                    <div className="flex-1 p-5 sm:p-6 bg-quattro-surface-dark">
                       <h3 className="font-display font-bold text-white text-lg sm:text-xl mb-2 group-hover:text-quattro-accent transition-colors">
                         {project.title}
                       </h3>
-                      <p className="font-body text-quattro-text-secondary text-sm leading-relaxed">
+                      <p className="font-body text-quattro-text-secondary text-sm leading-relaxed line-clamp-4">
                         {project.description}
                       </p>
                     </div>
