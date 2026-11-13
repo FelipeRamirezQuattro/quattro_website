@@ -67,7 +67,7 @@ export function buildConversationSummary(
     .filter((m) => m.role !== "system")
     .map(
       (m) =>
-        `${m.role === "user" ? "Visitor" : "Quattro Bot"}: ${m.content.slice(0, 300)}`,
+        `${m.role === "user" ? "Visitor" : "PFS Connect Bot"}: ${m.content.slice(0, 300)}`,
     )
     .join("\n\n");
 }

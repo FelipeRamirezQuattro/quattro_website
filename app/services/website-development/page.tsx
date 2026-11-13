@@ -4,7 +4,7 @@ import ServicePageContent from "@/components/sections/ServicePageContent";
 import { services } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "Modern Website Design — Quattro Software",
+  title: "Modern Website Design — PFS Connect",
   description:
     "Cutting-edge web development solutions. Whether launching a new project or enhancing your existing site, we bring your vision to life with mobile-first, conversion-focused design.",
 };

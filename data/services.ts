@@ -7,7 +7,7 @@ export const services: Service[] = [
     icon: "Bot",
     href: "/services/ai-solutions",
     description:
-      "Quattro designs AI-powered systems that automate repetitive work, connect disconnected data sources, and help teams make faster operational decisions.",
+      "PFS Connect designs AI-powered systems that automate repetitive work, connect disconnected data sources, and help teams make faster operational decisions.",
     features: [
       "AI Agent Development",
       "Process Automation",
@@ -40,7 +40,7 @@ export const services: Service[] = [
     icon: "Globe",
     href: "/services/website-development",
     description:
-      "Partner with Quattro for cutting-edge web development solutions. Whether you are launching a new project or seeking to enhance your existing website, we are committed to bringing your vision to life.",
+      "Partner with PFS Connect for cutting-edge web development solutions. Whether you are launching a new project or seeking to enhance your existing website, we are committed to bringing your vision to life.",
     features: [
       "Mobile-First Design",
       "Fast Performance",
@@ -57,7 +57,7 @@ export const services: Service[] = [
     icon: "BarChart3",
     href: "/services/quickbooks",
     description:
-      "Quattro specializes in developing tools that integrate financial management with QuickBooks. As leaders in QuickBooks Integration Development, Testing, and Support, we streamline financial workflows.",
+      "PFS Connect specializes in developing tools that integrate financial management with QuickBooks. As leaders in QuickBooks Integration Development, Testing, and Support, we streamline financial workflows.",
     features: [
       "Bi-directional Sync",
       "Custom Reporting",
@@ -92,7 +92,7 @@ export const services: Service[] = [
     icon: "Users",
     href: "/it-technical-support",
     description:
-      "Augment your team with skilled technical talent. Whether you need a dedicated developer, QA analyst, or IT specialist, Quattro provides vetted professionals who integrate seamlessly with your workflows.",
+      "Augment your team with skilled technical talent. Whether you need a dedicated developer, QA analyst, or IT specialist, PFS Connect provides vetted professionals who integrate seamlessly with your workflows.",
     features: [
       "Vetted Developers",
       "QA Specialists",

@@ -4,7 +4,7 @@ import ServicePageContent from "@/components/sections/ServicePageContent";
 import { services } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "QuickBooks Integration Apps — Quattro Software",
+  title: "QuickBooks Integration Apps — PFS Connect",
   description:
     "Leaders in QuickBooks integration development, testing, and support. We build tools that integrate financial management with QuickBooks to streamline your workflows.",
 };

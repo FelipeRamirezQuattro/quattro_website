@@ -8,9 +8,9 @@ import { team } from "@/data/team";
 import { values } from "@/data/values";
 
 export const metadata: Metadata = {
-  title: "About Us — Quattro Software",
+  title: "About Us — PFS Connect",
   description:
-    "Meet the team behind Quattro Software. We are a family-oriented custom software company founded in 2023, driven by integrity, reliability, and a passion for helping businesses grow.",
+    "Meet the team behind PFS Connect. We are a family-oriented custom software company founded in 2023, driven by integrity, reliability, and a passion for helping businesses grow.",
 };
 
 const valueIconMap: Record<string, React.ElementType> = {
@@ -25,14 +25,14 @@ export default function AboutPage() {
   return (
     <>
       {/* ── Hero ───────────────────────────────────────────────────── */}
-      <section className="relative py-20 sm:py-24 lg:py-32 bg-quattro-surface-dark overflow-hidden">
+      <section className="relative py-20 sm:py-24 lg:py-32 bg-pfs-surface-dark overflow-hidden">
         <div className="absolute inset-0 gradient-mesh opacity-30 pointer-events-none" />
         <div className="absolute inset-0 grid-overlay opacity-15 pointer-events-none" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <AnimatedSection>
             <AnimatedItem>
-              <p className="font-mono text-quattro-accent text-sm tracking-widest uppercase mb-4">
+              <p className="font-mono text-pfs-accent text-sm tracking-widest uppercase mb-4">
                 Our Story
               </p>
             </AnimatedItem>
@@ -40,7 +40,7 @@ export default function AboutPage() {
               <h1 className="font-display font-bold text-3xl sm:text-5xl lg:text-6xl text-white leading-tight mb-5 sm:mb-6">
                 About{" "}
                 <span className="relative inline-block">
-                  <span className="gradient-text">Quattro</span>
+                  <span className="gradient-text">PFS Connect</span>
                   <span
                     className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full"
                     style={{
@@ -53,7 +53,7 @@ export default function AboutPage() {
               </h1>
             </AnimatedItem>
             <AnimatedItem>
-              <p className="font-body text-base sm:text-xl text-quattro-text-secondary max-w-2xl mx-auto">
+              <p className="font-body text-base sm:text-xl text-pfs-text-secondary max-w-2xl mx-auto">
                 A family-oriented software company built on trust,
                 craftsmanship, and the belief that every business deserves
                 technology that works as hard as they do.
@@ -64,13 +64,13 @@ export default function AboutPage() {
       </section>
 
       {/* ── Who We Are ─────────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-quattro-surface-mid">
+      <section className="py-16 sm:py-20 lg:py-24 bg-pfs-surface-mid">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-center">
             {/* Text */}
             <AnimatedSection>
               <AnimatedItem>
-                <p className="font-mono text-quattro-accent text-sm tracking-widest uppercase mb-3">
+                <p className="font-mono text-pfs-accent text-sm tracking-widest uppercase mb-3">
                   Who We Are
                 </p>
               </AnimatedItem>
@@ -80,23 +80,23 @@ export default function AboutPage() {
                 </h2>
               </AnimatedItem>
               <AnimatedItem>
-                <p className="font-body text-quattro-text-secondary leading-relaxed mb-5">
-                  Quattro Software was founded in 2023 by Jeff Berthelsen — a
+                <p className="font-body text-pfs-text-secondary leading-relaxed mb-5">
+                  PFS Connect was founded in 2023 by Jeff Berthelsen — a
                   former controller with 13 years of business experience — who
                   saw firsthand how the right software could transform a
-                  company&#39;s operations. He built Quattro to bridge that gap
+                  company&#39;s operations. He built PFS Connect to bridge that gap
                   between vision and technology.
                 </p>
               </AnimatedItem>
               <AnimatedItem>
-                <p className="font-body text-quattro-text-secondary leading-relaxed mb-5">
+                <p className="font-body text-pfs-text-secondary leading-relaxed mb-5">
                   Our team is small, focused, and deeply committed. We are
                   developers, designers, analysts, and communicators who believe
                   software should solve real problems — not create new ones.
                 </p>
               </AnimatedItem>
               <AnimatedItem>
-                <p className="font-body text-quattro-text-secondary leading-relaxed">
+                <p className="font-body text-pfs-text-secondary leading-relaxed">
                   We treat every client engagement like a partnership. You will
                   hear from us regularly, understand every decision, and launch
                   with confidence.
@@ -115,16 +115,16 @@ export default function AboutPage() {
       </section>
 
       {/* ── Values ─────────────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-quattro-surface-light">
+      <section className="py-16 sm:py-20 lg:py-24 bg-pfs-surface-light">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-14">
             <AnimatedItem>
-              <p className="font-mono text-quattro-primary text-sm tracking-widest uppercase mb-3">
+              <p className="font-mono text-pfs-primary text-sm tracking-widest uppercase mb-3">
                 What We Stand For
               </p>
             </AnimatedItem>
             <AnimatedItem>
-              <h2 className="font-display font-bold text-3xl sm:text-4xl text-quattro-text-dark mb-4">
+              <h2 className="font-display font-bold text-3xl sm:text-4xl text-pfs-text-dark mb-4">
                 Our Core Values
               </h2>
             </AnimatedItem>
@@ -145,16 +145,16 @@ export default function AboutPage() {
               return (
                 <AnimatedItem key={v.title}>
                   <div
-                    className="group p-7 rounded-2xl bg-white border border-quattro-border-light
-                                  hover:border-quattro-primary/40 hover:shadow-lg transition-all duration-300"
+                    className="group p-7 rounded-2xl bg-white border border-pfs-border-light
+                                  hover:border-pfs-primary/40 hover:shadow-lg transition-all duration-300"
                   >
                     <div
-                      className="w-12 h-12 rounded-xl bg-quattro-primary/10 flex items-center justify-center mb-5
-                                    group-hover:bg-quattro-primary/20 transition-colors"
+                      className="w-12 h-12 rounded-xl bg-pfs-primary/10 flex items-center justify-center mb-5
+                                    group-hover:bg-pfs-primary/20 transition-colors"
                     >
-                      <Icon size={22} className="text-quattro-primary" />
+                      <Icon size={22} className="text-pfs-primary" />
                     </div>
-                    <h3 className="font-display font-bold text-lg text-quattro-text-dark mb-2">
+                    <h3 className="font-display font-bold text-lg text-pfs-text-dark mb-2">
                       {v.title}
                     </h3>
                     <p className="font-body text-slate-500 text-sm leading-relaxed">
@@ -169,11 +169,11 @@ export default function AboutPage() {
       </section>
 
       {/* ── Team ───────────────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-quattro-surface-dark">
+      <section className="py-16 sm:py-20 lg:py-24 bg-pfs-surface-dark">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-14">
             <AnimatedItem>
-              <p className="font-mono text-quattro-accent text-sm tracking-widest uppercase mb-3">
+              <p className="font-mono text-pfs-accent text-sm tracking-widest uppercase mb-3">
                 The People
               </p>
             </AnimatedItem>
@@ -183,7 +183,7 @@ export default function AboutPage() {
               </h2>
             </AnimatedItem>
             <AnimatedItem>
-              <p className="font-body text-quattro-text-secondary max-w-xl mx-auto">
+              <p className="font-body text-pfs-text-secondary max-w-xl mx-auto">
                 A group of dedicated professionals who care deeply about the
                 work they do and the clients they serve.
               </p>
@@ -197,8 +197,8 @@ export default function AboutPage() {
             {team.map((member) => (
               <AnimatedItem key={member.name}>
                 <div
-                  className="group p-7 rounded-2xl bg-quattro-surface-mid border border-quattro-border-dark
-                                hover:border-quattro-primary/50 transition-all duration-300"
+                  className="group p-7 rounded-2xl bg-pfs-surface-mid border border-pfs-border-dark
+                                hover:border-pfs-primary/50 transition-all duration-300"
                 >
                   {/* Avatar */}
                   {member.image ? (
@@ -224,10 +224,10 @@ export default function AboutPage() {
                   <h3 className="font-display font-bold text-white text-lg">
                     {member.name}
                   </h3>
-                  <p className="font-mono text-quattro-accent text-xs tracking-wide mb-3">
+                  <p className="font-mono text-pfs-accent text-xs tracking-wide mb-3">
                     {member.role}
                   </p>
-                  <p className="font-body text-quattro-text-secondary text-sm leading-relaxed">
+                  <p className="font-body text-pfs-text-secondary text-sm leading-relaxed">
                     {member.bio}
                   </p>
                 </div>

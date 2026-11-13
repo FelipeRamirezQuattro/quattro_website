@@ -12,9 +12,9 @@ import ProcessTimeline from "@/components/sections/ProcessTimeline";
 import CTABanner from "@/components/sections/CTABanner";
 
 export const metadata: Metadata = {
-  title: "How We Work — Quattro Software",
+  title: "How We Work — PFS Connect",
   description:
-    "Discover Quattro Software's transparent 7-step development process — from initial requirements gathering through design, build, UAT, and ongoing support.",
+    "Discover PFS Connect's transparent 7-step development process — from initial requirements gathering through design, build, UAT, and ongoing support.",
 };
 
 const overviewCards = [
@@ -79,14 +79,14 @@ export default function HowWeWorkPage() {
   return (
     <>
       {/* ── Hero ───────────────────────────────────────────────────── */}
-      <section className="relative py-20 sm:py-24 lg:py-32 bg-quattro-surface-dark overflow-hidden">
+      <section className="relative py-20 sm:py-24 lg:py-32 bg-pfs-surface-dark overflow-hidden">
         <div className="absolute inset-0 gradient-mesh opacity-30 pointer-events-none" />
         <div className="absolute inset-0 grid-overlay opacity-15 pointer-events-none" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <AnimatedSection>
             <AnimatedItem>
-              <p className="font-mono text-quattro-accent text-sm tracking-widest uppercase mb-4">
+              <p className="font-mono text-pfs-accent text-sm tracking-widest uppercase mb-4">
                 Our Methodology
               </p>
             </AnimatedItem>
@@ -96,7 +96,7 @@ export default function HowWeWorkPage() {
               </h1>
             </AnimatedItem>
             <AnimatedItem>
-              <p className="font-body text-base sm:text-xl text-quattro-text-secondary max-w-2xl mx-auto">
+              <p className="font-body text-base sm:text-xl text-pfs-text-secondary max-w-2xl mx-auto">
                 Every project follows the same disciplined process — adaptable
                 to your size, industry, and timeline.
               </p>
@@ -106,7 +106,7 @@ export default function HowWeWorkPage() {
       </section>
 
       {/* ── Overview cards ─────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 bg-quattro-surface-mid">
+      <section className="py-16 sm:py-20 bg-pfs-surface-mid">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection
             stagger
@@ -115,19 +115,19 @@ export default function HowWeWorkPage() {
             {overviewCards.map((card) => (
               <AnimatedItem key={card.title} className="h-full">
                 <div
-                  className="h-full flex flex-col p-7 rounded-2xl bg-quattro-surface-dark border border-quattro-border-dark
-                                hover:border-quattro-primary/50 transition-colors group"
+                  className="h-full flex flex-col p-7 rounded-2xl bg-pfs-surface-dark border border-pfs-border-dark
+                                hover:border-pfs-primary/50 transition-colors group"
                 >
                   <div
-                    className="w-12 h-12 rounded-xl bg-quattro-primary/20 flex items-center justify-center mb-5
-                                  group-hover:bg-quattro-primary/30 transition-colors"
+                    className="w-12 h-12 rounded-xl bg-pfs-primary/20 flex items-center justify-center mb-5
+                                  group-hover:bg-pfs-primary/30 transition-colors"
                   >
-                    <card.icon size={22} className="text-quattro-accent" />
+                    <card.icon size={22} className="text-pfs-accent" />
                   </div>
                   <h3 className="font-display font-bold text-white text-lg mb-3">
                     {card.title}
                   </h3>
-                  <p className="font-body text-quattro-text-secondary text-sm leading-relaxed">
+                  <p className="font-body text-pfs-text-secondary text-sm leading-relaxed">
                     {card.desc}
                   </p>
                 </div>
@@ -141,16 +141,16 @@ export default function HowWeWorkPage() {
       <ProcessTimeline />
 
       {/* ── Support pillars ────────────────────────────────────────── */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-quattro-surface-light">
+      <section className="py-16 sm:py-20 lg:py-24 bg-pfs-surface-light">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-14">
             <AnimatedItem>
-              <p className="font-mono text-quattro-primary text-sm tracking-widest uppercase mb-3">
+              <p className="font-mono text-pfs-primary text-sm tracking-widest uppercase mb-3">
                 Beyond Launch
               </p>
             </AnimatedItem>
             <AnimatedItem>
-              <h2 className="font-display font-bold text-3xl sm:text-4xl text-quattro-text-dark mb-4">
+              <h2 className="font-display font-bold text-3xl sm:text-4xl text-pfs-text-dark mb-4">
                 We Support You End-to-End
               </h2>
             </AnimatedItem>
@@ -163,13 +163,13 @@ export default function HowWeWorkPage() {
             {supportPillars.map((p) => (
               <AnimatedItem key={p.title}>
                 <div
-                  className="text-center p-6 rounded-2xl bg-white border border-quattro-border-light
-                                hover:border-quattro-primary/30 hover:shadow-md transition-all"
+                  className="text-center p-6 rounded-2xl bg-white border border-pfs-border-light
+                                hover:border-pfs-primary/30 hover:shadow-md transition-all"
                 >
-                  <div className="w-12 h-12 rounded-full bg-quattro-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <p.icon size={22} className="text-quattro-primary" />
+                  <div className="w-12 h-12 rounded-full bg-pfs-primary/10 flex items-center justify-center mx-auto mb-4">
+                    <p.icon size={22} className="text-pfs-primary" />
                   </div>
-                  <h3 className="font-display font-bold text-quattro-text-dark mb-2">
+                  <h3 className="font-display font-bold text-pfs-text-dark mb-2">
                     {p.title}
                   </h3>
                   <p className="font-body text-slate-500 text-sm leading-relaxed">
@@ -183,9 +183,9 @@ export default function HowWeWorkPage() {
       </section>
 
       {/* ── Tech stack marquee ─────────────────────────────────────── */}
-      <section className="py-14 sm:py-16 bg-quattro-surface-mid overflow-hidden">
+      <section className="py-14 sm:py-16 bg-pfs-surface-mid overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 text-center">
-          <p className="font-mono text-quattro-text-secondary text-sm tracking-widest uppercase">
+          <p className="font-mono text-pfs-text-secondary text-sm tracking-widest uppercase">
             Technologies We Work With
           </p>
         </div>
@@ -194,10 +194,10 @@ export default function HowWeWorkPage() {
             {[...techStack, ...techStack].map((tech, i) => (
               <span
                 key={i}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-quattro-border-dark
-                           bg-quattro-surface-dark text-quattro-text-secondary font-mono text-sm shrink-0"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-pfs-border-dark
+                           bg-pfs-surface-dark text-pfs-text-secondary font-mono text-sm shrink-0"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-quattro-accent" />
+                <span className="w-1.5 h-1.5 rounded-full bg-pfs-accent" />
                 {tech}
               </span>
             ))}

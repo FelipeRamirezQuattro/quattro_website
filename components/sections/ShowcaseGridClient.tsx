@@ -23,7 +23,7 @@ export default function ShowcaseGridClient() {
       : projects.filter((project) => project.categories.includes(activeFilter));
 
   return (
-    <section className="py-16 sm:py-20 bg-quattro-surface-mid">
+    <section className="py-16 sm:py-20 bg-pfs-surface-mid">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap gap-2.5 sm:gap-3 justify-center mb-10 sm:mb-14">
           {allCategories.map((category) => (
@@ -32,8 +32,8 @@ export default function ShowcaseGridClient() {
               onClick={() => setActiveFilter(category)}
               className={`px-4 sm:px-5 py-2 rounded-full font-mono text-xs sm:text-sm transition-all duration-300 border ${
                 activeFilter === category
-                  ? "bg-quattro-primary text-white border-quattro-primary"
-                  : "bg-transparent text-quattro-text-secondary border-quattro-border-dark hover:border-quattro-primary/50 hover:text-white"
+                  ? "bg-pfs-primary text-white border-pfs-primary"
+                  : "bg-transparent text-pfs-text-secondary border-pfs-border-dark hover:border-pfs-primary/50 hover:text-white"
               }`}
             >
               {category}
@@ -62,7 +62,7 @@ export default function ShowcaseGridClient() {
                   href={`/showcase/${project.slug}`}
                   className="group block h-full"
                 >
-                  <div className="flex h-full flex-col rounded-2xl overflow-hidden border border-quattro-border-dark hover:border-quattro-primary/50 transition-all duration-300 hover:-translate-y-1">
+                  <div className="flex h-full flex-col rounded-2xl overflow-hidden border border-pfs-border-dark hover:border-pfs-primary/50 transition-all duration-300 hover:-translate-y-1">
                     <div
                       className={`h-52 shrink-0 bg-gradient-to-br ${project.gradient} relative overflow-hidden`}
                     >
@@ -92,11 +92,11 @@ export default function ShowcaseGridClient() {
                       </div>
                     </div>
 
-                    <div className="flex-1 p-5 sm:p-6 bg-quattro-surface-dark">
-                      <h3 className="font-display font-bold text-white text-lg sm:text-xl mb-2 group-hover:text-quattro-accent transition-colors">
+                    <div className="flex-1 p-5 sm:p-6 bg-pfs-surface-dark">
+                      <h3 className="font-display font-bold text-white text-lg sm:text-xl mb-2 group-hover:text-pfs-accent transition-colors">
                         {project.title}
                       </h3>
-                      <p className="font-body text-quattro-text-secondary text-sm leading-relaxed line-clamp-4">
+                      <p className="font-body text-pfs-text-secondary text-sm leading-relaxed line-clamp-4">
                         {project.description}
                       </p>
                     </div>

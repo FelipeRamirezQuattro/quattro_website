@@ -33,7 +33,7 @@ export default function ServicePageContent({ service, Icon, source }: Props) {
   return (
     <>
       {/* ── Hero ───────────────────────────────────────────────────── */}
-      <section className="relative py-28 lg:py-36 bg-quattro-surface-dark overflow-hidden">
+      <section className="relative py-28 lg:py-36 bg-pfs-surface-dark overflow-hidden">
         <div className="absolute inset-0 gradient-mesh opacity-30 pointer-events-none" />
         <div className="absolute inset-0 grid-overlay opacity-15 pointer-events-none" />
 
@@ -45,10 +45,10 @@ export default function ServicePageContent({ service, Icon, source }: Props) {
               <AnimatedItem>
                 {/* Icon */}
                 <div
-                  className="w-16 h-16 rounded-2xl bg-quattro-primary/20 flex items-center justify-center mb-8
-                                border border-quattro-primary/40"
+                  className="w-16 h-16 rounded-2xl bg-pfs-primary/20 flex items-center justify-center mb-8
+                                border border-pfs-primary/40"
                 >
-                  <Icon size={30} className="text-quattro-accent" />
+                  <Icon size={30} className="text-pfs-accent" />
                 </div>
               </AnimatedItem>
               <AnimatedItem>
@@ -57,7 +57,7 @@ export default function ServicePageContent({ service, Icon, source }: Props) {
                 </h1>
               </AnimatedItem>
               <AnimatedItem>
-                <p className="font-body text-quattro-text-secondary text-lg sm:text-xl max-w-2xl">
+                <p className="font-body text-pfs-text-secondary text-lg sm:text-xl max-w-2xl">
                   {service.description}
                 </p>
               </AnimatedItem>
@@ -67,9 +67,9 @@ export default function ServicePageContent({ service, Icon, source }: Props) {
               <AnimatedSection direction="right" className="mt-10 lg:mt-0">
                 <AnimatedItem direction="right">
                   <div
-                    className={`relative h-64 sm:h-80 lg:h-96 rounded-2xl border border-quattro-border-dark overflow-hidden ${
+                    className={`relative h-64 sm:h-80 lg:h-96 rounded-2xl border border-pfs-border-dark overflow-hidden ${
                       service.heroImageFit === "contain"
-                        ? "bg-quattro-surface-dark p-8"
+                        ? "bg-pfs-surface-dark p-8"
                         : ""
                     }`}
                   >
@@ -86,7 +86,7 @@ export default function ServicePageContent({ service, Icon, source }: Props) {
                       priority
                     />
                     {service.heroImageFit !== "contain" && (
-                      <div className="absolute inset-0 bg-gradient-to-t from-quattro-surface-dark/40 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-pfs-surface-dark/40 to-transparent" />
                     )}
                   </div>
                 </AnimatedItem>
@@ -97,11 +97,11 @@ export default function ServicePageContent({ service, Icon, source }: Props) {
       </section>
 
       {/* ── Features ───────────────────────────────────────────────── */}
-      <section className="py-24 bg-quattro-surface-mid">
+      <section className="py-24 bg-pfs-surface-mid">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="mb-12">
             <AnimatedItem>
-              <p className="font-mono text-quattro-accent text-sm tracking-widest uppercase mb-3">
+              <p className="font-mono text-pfs-accent text-sm tracking-widest uppercase mb-3">
                 What&#39;s Included
               </p>
             </AnimatedItem>
@@ -119,14 +119,14 @@ export default function ServicePageContent({ service, Icon, source }: Props) {
             {service.features.map((feature) => (
               <AnimatedItem key={feature}>
                 <div
-                  className="flex items-start gap-4 p-5 rounded-xl bg-quattro-surface-dark border border-quattro-border-dark
-                                hover:border-quattro-primary/40 transition-colors"
+                  className="flex items-start gap-4 p-5 rounded-xl bg-pfs-surface-dark border border-pfs-border-dark
+                                hover:border-pfs-primary/40 transition-colors"
                 >
                   <CheckCircle2
                     size={20}
-                    className="text-quattro-accent shrink-0 mt-0.5"
+                    className="text-pfs-accent shrink-0 mt-0.5"
                   />
-                  <span className="font-body text-quattro-text-secondary leading-relaxed">
+                  <span className="font-body text-pfs-text-secondary leading-relaxed">
                     {feature}
                   </span>
                 </div>
@@ -137,16 +137,16 @@ export default function ServicePageContent({ service, Icon, source }: Props) {
       </section>
 
       {/* ── Mini-process ───────────────────────────────────────────── */}
-      <section className="py-24 bg-quattro-surface-light">
+      <section className="py-24 bg-pfs-surface-light">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-14">
             <AnimatedItem>
-              <p className="font-mono text-quattro-primary text-sm tracking-widest uppercase mb-3">
+              <p className="font-mono text-pfs-primary text-sm tracking-widest uppercase mb-3">
                 How It Works
               </p>
             </AnimatedItem>
             <AnimatedItem>
-              <h2 className="font-display font-bold text-3xl sm:text-4xl text-quattro-text-dark">
+              <h2 className="font-display font-bold text-3xl sm:text-4xl text-pfs-text-dark">
                 Our 3-Step Engagement
               </h2>
             </AnimatedItem>
@@ -158,18 +158,18 @@ export default function ServicePageContent({ service, Icon, source }: Props) {
           >
             {miniProcess.map((step, i) => (
               <AnimatedItem key={step.step}>
-                <div className="relative p-7 rounded-2xl bg-white border border-quattro-border-light hover:shadow-lg transition-all">
+                <div className="relative p-7 rounded-2xl bg-white border border-pfs-border-light hover:shadow-lg transition-all">
                   {/* Connector line */}
                   {i < miniProcess.length - 1 && (
                     <div
                       className="hidden md:block absolute top-7 left-[calc(100%+1px)] w-8 h-0.5
-                                    bg-gradient-to-r from-quattro-primary/40 to-transparent z-10"
+                                    bg-gradient-to-r from-pfs-primary/40 to-transparent z-10"
                     />
                   )}
-                  <span className="font-mono font-bold text-4xl text-quattro-primary/20 block mb-4">
+                  <span className="font-mono font-bold text-4xl text-pfs-primary/20 block mb-4">
                     {step.step}
                   </span>
-                  <h3 className="font-display font-bold text-xl text-quattro-text-dark mb-3">
+                  <h3 className="font-display font-bold text-xl text-pfs-text-dark mb-3">
                     {step.title}
                   </h3>
                   <p className="font-body text-slate-500 leading-relaxed text-sm">

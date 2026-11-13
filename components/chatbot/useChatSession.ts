@@ -13,7 +13,7 @@ import {
 const WELCOME_MESSAGE: ChatMessage = {
   id: "welcome",
   role: "assistant",
-  content: `Hi there! 👋 Welcome to **Quattro Software**.\n\nI can answer questions about our services, process, and pricing. How can I help you today?`,
+  content: `Hi there! 👋 Welcome to **PFS Connect**.\n\nI can answer questions about our services, process, and pricing. How can I help you today?`,
   source: "system",
   timestamp: new Date(),
   showContactForm: false,

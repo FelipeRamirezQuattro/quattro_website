@@ -13,7 +13,7 @@ import AnimatedSection, { AnimatedItem } from "@/components/ui/AnimatedSection";
 import CTABanner from "@/components/sections/CTABanner";
 
 export const metadata: Metadata = {
-  title: "AI Solutions & Automation — Quattro Software",
+  title: "AI Solutions & Automation — PFS Connect",
   description:
     "AI agent development, process automation, data integration, API development, cloud infrastructure, and automation consulting tailored to your operations.",
 };
@@ -105,14 +105,14 @@ const aiTracks = [
 export default function AISolutionsPage() {
   return (
     <>
-      <section className="relative py-20 sm:py-24 lg:py-32 bg-quattro-surface-dark overflow-hidden">
+      <section className="relative py-20 sm:py-24 lg:py-32 bg-pfs-surface-dark overflow-hidden">
         <div className="absolute inset-0 gradient-mesh opacity-30 pointer-events-none" />
         <div className="absolute inset-0 grid-overlay opacity-15 pointer-events-none" />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <AnimatedSection>
             <AnimatedItem>
-              <p className="font-mono text-quattro-accent text-xs sm:text-sm tracking-widest uppercase mb-3">
+              <p className="font-mono text-pfs-accent text-xs sm:text-sm tracking-widest uppercase mb-3">
                 New Service Category
               </p>
             </AnimatedItem>
@@ -122,7 +122,7 @@ export default function AISolutionsPage() {
               </h1>
             </AnimatedItem>
             <AnimatedItem>
-              <p className="font-body text-base sm:text-xl text-quattro-text-secondary max-w-3xl">
+              <p className="font-body text-base sm:text-xl text-pfs-text-secondary max-w-3xl">
                 We help operations-heavy teams design and deploy AI systems that
                 automate workflows, integrate legacy and modern platforms, and
                 turn scattered data into reliable decision support.
@@ -132,11 +132,11 @@ export default function AISolutionsPage() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20 lg:py-24 bg-quattro-surface-mid">
+      <section className="py-16 sm:py-20 lg:py-24 bg-pfs-surface-mid">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-10 sm:mb-14">
             <AnimatedItem>
-              <p className="font-mono text-quattro-primary text-xs sm:text-sm tracking-widest uppercase mb-3">
+              <p className="font-mono text-pfs-primary text-xs sm:text-sm tracking-widest uppercase mb-3">
                 Capabilities
               </p>
             </AnimatedItem>
@@ -154,7 +154,7 @@ export default function AISolutionsPage() {
             {aiTracks.map(
               ({ title, description, bullets, Icon, visual }) => (
                 <AnimatedItem key={title}>
-                  <article className="h-full rounded-2xl border border-quattro-border-dark bg-quattro-surface-dark overflow-hidden">
+                  <article className="h-full rounded-2xl border border-pfs-border-dark bg-pfs-surface-dark overflow-hidden">
                     <div className="relative h-56 sm:h-64 overflow-hidden">
                       <Image
                         src={visual}
@@ -163,8 +163,8 @@ export default function AISolutionsPage() {
                         sizes="(min-width: 768px) 50vw, 100vw"
                         className="object-cover"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-quattro-surface-dark via-quattro-surface-dark/10 to-transparent" />
-                      <div className="absolute top-4 left-4 w-11 h-11 rounded-xl bg-quattro-primary/30 backdrop-blur-sm border border-quattro-primary/50 flex items-center justify-center">
+                      <div className="absolute inset-0 bg-gradient-to-t from-pfs-surface-dark via-pfs-surface-dark/10 to-transparent" />
+                      <div className="absolute top-4 left-4 w-11 h-11 rounded-xl bg-pfs-primary/30 backdrop-blur-sm border border-pfs-primary/50 flex items-center justify-center">
                         <Icon size={20} className="text-white" />
                       </div>
                     </div>
@@ -173,7 +173,7 @@ export default function AISolutionsPage() {
                       <h3 className="font-display font-bold text-lg sm:text-xl text-white mb-3">
                         {title}
                       </h3>
-                      <p className="font-body text-sm text-quattro-text-secondary leading-relaxed mb-4">
+                      <p className="font-body text-sm text-pfs-text-secondary leading-relaxed mb-4">
                         {description}
                       </p>
 
@@ -181,11 +181,11 @@ export default function AISolutionsPage() {
                         {bullets.map((item) => (
                           <li
                             key={item}
-                            className="flex items-start gap-2.5 font-body text-sm text-quattro-text-secondary"
+                            className="flex items-start gap-2.5 font-body text-sm text-pfs-text-secondary"
                           >
                             <CheckCircle2
                               size={16}
-                              className="text-quattro-accent shrink-0 mt-0.5"
+                              className="text-pfs-accent shrink-0 mt-0.5"
                             />
                             <span>{item}</span>
                           </li>

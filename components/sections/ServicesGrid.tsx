@@ -43,13 +43,13 @@ const cards = [
 
 export default function ServicesGrid() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-quattro-surface-light">
+    <section className="py-16 sm:py-20 lg:py-24 bg-pfs-surface-light">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-10 sm:mb-14">
-          <p className="font-mono text-quattro-primary text-sm tracking-widest uppercase mb-3">
+          <p className="font-mono text-pfs-primary text-sm tracking-widest uppercase mb-3">
             What We Do
           </p>
-          <h2 className="font-display font-bold text-2xl sm:text-4xl lg:text-5xl text-quattro-text-dark mb-3 sm:mb-4">
+          <h2 className="font-display font-bold text-2xl sm:text-4xl lg:text-5xl text-pfs-text-dark mb-3 sm:mb-4">
             Our Custom Technology Solutions
           </h2>
           <p className="font-body text-base sm:text-lg text-gray-500 max-w-2xl mx-auto">
@@ -66,7 +66,7 @@ export default function ServicesGrid() {
             <AnimatedItem key={title}>
               <TiltCard className="h-full">
                 <div
-                  className="h-full flex flex-col p-8 bg-quattro-surface-mid rounded-2xl border border-quattro-border-dark card-glow transition-all duration-300 group"
+                  className="h-full flex flex-col p-8 bg-pfs-surface-mid rounded-2xl border border-pfs-border-dark card-glow transition-all duration-300 group"
                   style={{ boxShadow: `0 4px 30px rgba(0,0,0,0.3)` }}
                 >
                   {/* Icon */}
@@ -88,13 +88,13 @@ export default function ServicesGrid() {
                   <h3 className="font-display font-bold text-lg sm:text-xl text-white mb-3">
                     {title}
                   </h3>
-                  <p className="font-body text-quattro-text-secondary text-sm leading-relaxed flex-1 mb-6">
+                  <p className="font-body text-pfs-text-secondary text-sm leading-relaxed flex-1 mb-6">
                     {body}
                   </p>
 
                   <Link
                     href={href}
-                    className="inline-flex items-center gap-1.5 text-quattro-accent text-sm font-body font-medium hover:gap-3 transition-all duration-200 group/link"
+                    className="inline-flex items-center gap-1.5 text-pfs-accent text-sm font-body font-medium hover:gap-3 transition-all duration-200 group/link"
                   >
                     {cta}{" "}
                     <ArrowRight

@@ -8,7 +8,7 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 const testimonials = [
   {
     company: "Group 1826",
-    text: "We're incredibly grateful for the app Quattro Software created for us! They go above and beyond typical custom software development. Not only did they design an app that streamlined our collection efforts, but they also continuously enhance it with updates for improved efficiency and automation. Their communication throughout the process has been excellent, and they're always available to offer support whenever we need it.",
+    text: "We're incredibly grateful for the app PFS Connect created for us! They go above and beyond typical custom software development. Not only did they design an app that streamlined our collection efforts, but they also continuously enhance it with updates for improved efficiency and automation. Their communication throughout the process has been excellent, and they're always available to offer support whenever we need it.",
     rating: 5,
     role: "Client",
   },
@@ -22,13 +22,13 @@ export default function TestimonialsCarousel() {
   const next = () => setCurrent((c) => (c + 1) % testimonials.length);
 
   return (
-    <section className="py-24 bg-quattro-surface-light">
+    <section className="py-24 bg-pfs-surface-light">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-12">
-          <p className="font-mono text-quattro-primary text-sm tracking-widest uppercase mb-3">
+          <p className="font-mono text-pfs-primary text-sm tracking-widest uppercase mb-3">
             Client Stories
           </p>
-          <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-quattro-text-dark">
+          <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-pfs-text-dark">
             What Our Clients Say
           </h2>
         </AnimatedSection>
@@ -44,7 +44,7 @@ export default function TestimonialsCarousel() {
               className="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-gray-100"
             >
               {/* Quote mark */}
-              <div className="text-quattro-primary mb-6">
+              <div className="text-pfs-primary mb-6">
                 <Quote size={40} fill="currentColor" className="opacity-20" />
               </div>
 
@@ -67,10 +67,10 @@ export default function TestimonialsCarousel() {
               </blockquote>
 
               <div>
-                <div className="font-display font-bold text-quattro-text-dark text-lg">
+                <div className="font-display font-bold text-pfs-text-dark text-lg">
                   {testimonials[current].company}
                 </div>
-                <div className="font-body text-sm text-quattro-primary">
+                <div className="font-body text-sm text-pfs-primary">
                   {testimonials[current].role}
                 </div>
               </div>
@@ -82,7 +82,7 @@ export default function TestimonialsCarousel() {
             <div className="flex items-center justify-center gap-4 mt-6">
               <button
                 onClick={prev}
-                className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-quattro-primary hover:border-quattro-primary transition-colors"
+                className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-pfs-primary hover:border-pfs-primary transition-colors"
                 aria-label="Previous testimonial"
               >
                 <ChevronLeft size={18} />
@@ -93,7 +93,7 @@ export default function TestimonialsCarousel() {
                     key={i}
                     onClick={() => setCurrent(i)}
                     className={`w-2 h-2 rounded-full transition-all ${
-                      i === current ? "bg-quattro-primary w-6" : "bg-gray-300"
+                      i === current ? "bg-pfs-primary w-6" : "bg-gray-300"
                     }`}
                     aria-label={`Testimonial ${i + 1}`}
                   />
@@ -101,7 +101,7 @@ export default function TestimonialsCarousel() {
               </div>
               <button
                 onClick={next}
-                className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-quattro-primary hover:border-quattro-primary transition-colors"
+                className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-pfs-primary hover:border-pfs-primary transition-colors"
                 aria-label="Next testimonial"
               >
                 <ChevronRight size={18} />

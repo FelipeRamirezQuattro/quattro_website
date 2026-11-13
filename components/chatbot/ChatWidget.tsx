@@ -41,7 +41,7 @@ export default function ChatWidget() {
             transition={{ type: "spring", stiffness: 340, damping: 30 }}
             role="dialog"
             aria-modal="true"
-            aria-label="Quattro chat"
+            aria-label="PFS Connect chat"
             className="fixed bottom-24 right-6 z-50 flex flex-col overflow-hidden rounded-2xl shadow-2xl"
             style={{
               width: "min(440px, calc(100vw - 20px))",
@@ -83,7 +83,7 @@ export default function ChatWidget() {
                       fontFamily: "Syne, sans-serif",
                     }}
                   >
-                    Quattro AI Assistant
+                    PFS Connect AI Assistant
                   </p>
                   <div className="flex items-center gap-1.5 mt-1">
                     <span

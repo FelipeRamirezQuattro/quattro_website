@@ -26,13 +26,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!post) {
     return {
-      title: "Article Not Found — Quattro Software",
+      title: "Article Not Found — PFS Connect",
       description: "The requested article could not be found.",
     };
   }
 
   return {
-    title: `${post.title} — Quattro Blog`,
+    title: `${post.title} — PFS Connect Blog`,
     description: post.excerpt,
   };
 }
@@ -57,18 +57,18 @@ export default async function BlogDetailPage({ params }: Props) {
 
   return (
     <>
-      <section className="py-20 bg-quattro-surface-dark">
+      <section className="py-20 bg-pfs-surface-dark">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="font-mono text-xs uppercase tracking-widest text-quattro-accent mb-3">
+          <p className="font-mono text-xs uppercase tracking-widest text-pfs-accent mb-3">
             {post.category || "Engineering"}
           </p>
           <h1 className="font-display text-4xl sm:text-5xl font-bold text-white mb-4">
             {post.title}
           </h1>
-          <p className="font-body text-quattro-text-secondary text-lg mb-4 max-w-3xl">
+          <p className="font-body text-pfs-text-secondary text-lg mb-4 max-w-3xl">
             {post.excerpt}
           </p>
-          <p className="font-mono text-xs text-quattro-text-secondary uppercase tracking-wide">
+          <p className="font-mono text-xs text-pfs-text-secondary uppercase tracking-wide">
             {formatDate(post.published_at || post.created_at)} ·{" "}
             {estimateReadTime(post.content)} min read · {post.author}
           </p>
@@ -76,9 +76,9 @@ export default async function BlogDetailPage({ params }: Props) {
       </section>
 
       {post.cover_image && (
-        <section className="bg-quattro-surface-mid">
+        <section className="bg-pfs-surface-mid">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative">
-            <div className="relative h-64 sm:h-96 rounded-2xl overflow-hidden border border-quattro-border-dark">
+            <div className="relative h-64 sm:h-96 rounded-2xl overflow-hidden border border-pfs-border-dark">
               <Image
                 src={post.cover_image}
                 alt={post.title}
@@ -91,29 +91,29 @@ export default async function BlogDetailPage({ params }: Props) {
         </section>
       )}
 
-      <section className="py-14 bg-quattro-surface-mid">
+      <section className="py-14 bg-pfs-surface-mid">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-[1fr_260px] gap-10">
-          <article className="prose prose-invert max-w-none prose-headings:font-display prose-p:text-quattro-text-secondary prose-li:text-quattro-text-secondary">
+          <article className="prose prose-invert max-w-none prose-headings:font-display prose-p:text-pfs-text-secondary prose-li:text-pfs-text-secondary">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {post.content}
             </ReactMarkdown>
           </article>
 
           <aside className="hidden lg:block">
-            <div className="sticky top-28 rounded-xl border border-quattro-border-dark bg-quattro-surface-dark p-5">
-              <p className="font-mono text-xs uppercase tracking-wide text-quattro-accent mb-3">
+            <div className="sticky top-28 rounded-xl border border-pfs-border-dark bg-pfs-surface-dark p-5">
+              <p className="font-mono text-xs uppercase tracking-wide text-pfs-accent mb-3">
                 Table Of Contents
               </p>
               <ul className="space-y-2">
                 {toc.length === 0 && (
-                  <li className="text-sm text-quattro-text-secondary">
+                  <li className="text-sm text-pfs-text-secondary">
                     No headings
                   </li>
                 )}
                 {toc.map((item) => (
                   <li
                     key={item.id}
-                    className="text-sm text-quattro-text-secondary"
+                    className="text-sm text-pfs-text-secondary"
                   >
                     {item.text}
                   </li>

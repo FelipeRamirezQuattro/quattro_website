@@ -28,7 +28,7 @@ export default function BlogTeaser() {
     {
       id: "p1",
       title: "Coming Soon",
-      excerpt: "Tech insights from the Quattro team — stay tuned.",
+      excerpt: "Tech insights from the PFS Connect team — stay tuned.",
       category: "Technology",
     },
     {
@@ -42,7 +42,7 @@ export default function BlogTeaser() {
   const displayPosts = loading ? [] : posts.length > 0 ? posts : placeholders;
 
   return (
-    <section className="py-24 bg-quattro-surface-dark relative overflow-hidden">
+    <section className="py-24 bg-pfs-surface-dark relative overflow-hidden">
       <div className="absolute inset-0 grid-overlay opacity-20 pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,7 +50,7 @@ export default function BlogTeaser() {
           {/* Blog teaser */}
           <div>
             <AnimatedSection direction="left">
-              <p className="font-mono text-quattro-accent text-sm tracking-widest uppercase mb-3">
+              <p className="font-mono text-pfs-accent text-sm tracking-widest uppercase mb-3">
                 Insights
               </p>
               <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mb-8">
@@ -61,8 +61,8 @@ export default function BlogTeaser() {
             <AnimatedSection stagger className="space-y-6">
               {displayPosts.map((post, i) => (
                 <AnimatedItem key={post.id || i}>
-                  <div className="rounded-2xl bg-quattro-surface-mid border border-quattro-border-dark hover:border-quattro-primary/50 transition-all group relative overflow-hidden flex gap-5">
-                    <div className="relative w-28 sm:w-36 shrink-0 bg-quattro-surface-dark">
+                  <div className="rounded-2xl bg-pfs-surface-mid border border-pfs-border-dark hover:border-pfs-primary/50 transition-all group relative overflow-hidden flex gap-5">
+                    <div className="relative w-28 sm:w-36 shrink-0 bg-pfs-surface-dark">
                       {post.cover_image ? (
                         <Image
                           src={post.cover_image}
@@ -85,14 +85,14 @@ export default function BlogTeaser() {
                       {post.category && (
                         <Badge className="mb-3">{post.category}</Badge>
                       )}
-                      <h3 className="font-display font-bold text-white mb-2 group-hover:text-quattro-accent transition-colors">
+                      <h3 className="font-display font-bold text-white mb-2 group-hover:text-pfs-accent transition-colors">
                         {post.title}
                       </h3>
-                      <p className="font-body text-sm text-quattro-text-secondary mb-4 line-clamp-2">
+                      <p className="font-body text-sm text-pfs-text-secondary mb-4 line-clamp-2">
                         {post.excerpt}
                       </p>
                       {post.published_at && (
-                        <div className="flex items-center gap-1.5 text-xs text-quattro-text-secondary/60">
+                        <div className="flex items-center gap-1.5 text-xs text-pfs-text-secondary/60">
                           <Calendar size={12} />
                           {formatDate(post.published_at)}
                         </div>
@@ -100,7 +100,7 @@ export default function BlogTeaser() {
                       {post.slug && post.title !== "Coming Soon" && (
                         <Link
                           href={`/blog/${post.slug}`}
-                          className="inline-flex items-center gap-1 text-quattro-accent text-xs mt-3 hover:gap-2 transition-all"
+                          className="inline-flex items-center gap-1 text-pfs-accent text-xs mt-3 hover:gap-2 transition-all"
                         >
                           Read More <ArrowRight size={12} />
                         </Link>
@@ -114,7 +114,7 @@ export default function BlogTeaser() {
             <AnimatedSection className="mt-6">
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-2 text-quattro-accent text-sm font-body hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-pfs-accent text-sm font-body hover:gap-3 transition-all"
               >
                 View All Posts <ArrowRight size={14} />
               </Link>

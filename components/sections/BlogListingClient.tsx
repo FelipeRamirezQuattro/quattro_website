@@ -53,14 +53,14 @@ export default function BlogListingClient() {
           excerpt:
             "We are preparing practical software and product insights for this category.",
           content: "",
-          author: "Quattro Team",
+          author: "PFS Connect Team",
           published: true,
           cover_image: undefined,
           category: activeCategory === "All" ? "Engineering" : activeCategory,
         }));
 
   return (
-    <section className="py-16 sm:py-20 bg-quattro-surface-mid">
+    <section className="py-16 sm:py-20 bg-pfs-surface-mid">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap gap-2.5 sm:gap-3 justify-center mb-10 sm:mb-12">
           {categories.map((category) => (
@@ -69,8 +69,8 @@ export default function BlogListingClient() {
               onClick={() => setActiveCategory(category)}
               className={`px-3.5 sm:px-4 py-2 rounded-full font-mono text-[11px] sm:text-xs border transition-colors ${
                 activeCategory === category
-                  ? "bg-quattro-primary border-quattro-primary text-white"
-                  : "bg-transparent border-quattro-border-dark text-quattro-text-secondary hover:border-quattro-primary/50 hover:text-white"
+                  ? "bg-pfs-primary border-pfs-primary text-white"
+                  : "bg-transparent border-pfs-border-dark text-pfs-text-secondary hover:border-pfs-primary/50 hover:text-white"
               }`}
             >
               {category}
@@ -83,7 +83,7 @@ export default function BlogListingClient() {
             {Array.from({ length: 3 }).map((_, i) => (
               <div
                 key={i}
-                className="h-64 rounded-2xl bg-quattro-surface-dark border border-quattro-border-dark animate-pulse"
+                className="h-64 rounded-2xl bg-pfs-surface-dark border border-pfs-border-dark animate-pulse"
               />
             ))}
           </div>
@@ -92,10 +92,10 @@ export default function BlogListingClient() {
             {displayPosts.map((post) => (
               <article
                 key={post.id}
-                className="rounded-2xl border border-quattro-border-dark bg-quattro-surface-dark overflow-hidden
-                           hover:border-quattro-primary/50 transition-all"
+                className="rounded-2xl border border-pfs-border-dark bg-pfs-surface-dark overflow-hidden
+                           hover:border-pfs-primary/50 transition-all"
               >
-                <div className="relative h-40 bg-quattro-surface-mid">
+                <div className="relative h-40 bg-pfs-surface-mid">
                   {post.cover_image ? (
                     <Image
                       src={post.cover_image}
@@ -109,23 +109,23 @@ export default function BlogListingClient() {
                 </div>
 
                 <div className="p-5 sm:p-6">
-                  <p className="font-mono text-xs text-quattro-accent mb-2 uppercase tracking-wide">
+                  <p className="font-mono text-xs text-pfs-accent mb-2 uppercase tracking-wide">
                     {post.category || "Engineering"}
                   </p>
                   <h2 className="font-display text-lg sm:text-xl text-white font-bold mb-3 min-h-12 sm:min-h-14">
                     {post.title}
                   </h2>
-                  <p className="font-body text-sm text-quattro-text-secondary leading-relaxed mb-5 min-h-16">
+                  <p className="font-body text-sm text-pfs-text-secondary leading-relaxed mb-5 min-h-16">
                     {post.excerpt}
                   </p>
                   {post.slug === "#" ? (
-                    <span className="inline-flex items-center gap-2 text-sm font-body text-quattro-text-secondary">
+                    <span className="inline-flex items-center gap-2 text-sm font-body text-pfs-text-secondary">
                       Publishing soon
                     </span>
                   ) : (
                     <Link
                       href={`/blog/${post.slug}`}
-                      className="inline-flex items-center gap-2 text-sm font-body text-quattro-accent hover:text-quattro-accent-2 transition-colors"
+                      className="inline-flex items-center gap-2 text-sm font-body text-pfs-accent hover:text-pfs-accent-2 transition-colors"
                     >
                       Read article
                       <ArrowUpRight size={14} />

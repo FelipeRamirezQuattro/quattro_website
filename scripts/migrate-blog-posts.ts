@@ -195,7 +195,7 @@ async function main() {
         content,
         post.category_name,
         tags ? JSON.stringify(tags) : null,
-        post.author_name || "Quattro Team",
+        post.author_name || "PFS Connect Team",
         true,
         post.post_date,
       ],

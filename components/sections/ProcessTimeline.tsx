@@ -38,7 +38,7 @@ export default function ProcessTimeline() {
   return (
     <section
       ref={containerRef}
-      className="py-24 bg-quattro-surface-dark relative overflow-hidden"
+      className="py-24 bg-pfs-surface-dark relative overflow-hidden"
     >
       {/* Background grid */}
       <div className="absolute inset-0 grid-overlay opacity-20 pointer-events-none" />
@@ -46,13 +46,13 @@ export default function ProcessTimeline() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}
         <div className="text-center mb-20">
-          <p className="font-mono text-quattro-accent text-sm tracking-widest uppercase mb-3">
+          <p className="font-mono text-pfs-accent text-sm tracking-widest uppercase mb-3">
             Methodology
           </p>
           <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-4">
             Our Development Process
           </h2>
-          <p className="font-body text-quattro-text-secondary text-lg max-w-2xl mx-auto">
+          <p className="font-body text-pfs-text-secondary text-lg max-w-2xl mx-auto">
             A transparent, iterative workflow where you stay informed and in
             control from day one.
           </p>
@@ -66,7 +66,7 @@ export default function ProcessTimeline() {
             style={{ width: 2 }}
           >
             {/* Placeholder track */}
-            <div className="absolute inset-0 bg-quattro-border-dark rounded-full" />
+            <div className="absolute inset-0 bg-pfs-border-dark rounded-full" />
             {/* Animated fill */}
             <motion.div
               className="absolute top-0 left-0 right-0 origin-top rounded-full"
@@ -155,12 +155,12 @@ function TimelineStep({
               ["0 0 0px rgba(56,189,248,0)", "0 0 30px rgba(56,189,248,0.7)"],
             ),
           }}
-          className="w-12 h-12 rounded-full flex items-center justify-center border-2 border-quattro-primary bg-quattro-surface-dark transition-all duration-500"
+          className="w-12 h-12 rounded-full flex items-center justify-center border-2 border-pfs-primary bg-pfs-surface-dark transition-all duration-500"
         >
           <Icon size={20} color="rgb(56,189,248)" />
         </motion.div>
         {/* Step number badge */}
-        <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-quattro-accent flex items-center justify-center text-xs font-mono font-bold text-quattro-surface-dark">
+        <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-pfs-accent flex items-center justify-center text-xs font-mono font-bold text-pfs-surface-dark">
           {step.number}
         </div>
       </div>
@@ -173,7 +173,7 @@ function TimelineStep({
         className={`w-5/12 ${isLeft ? "pr-12 text-right" : "ml-auto pl-12 text-left"}`}
       >
         <div
-          className={`p-6 rounded-2xl bg-quattro-surface-mid border border-quattro-border-dark hover:border-quattro-primary/50 transition-colors ${
+          className={`p-6 rounded-2xl bg-pfs-surface-mid border border-pfs-border-dark hover:border-pfs-primary/50 transition-colors ${
             isLeft ? "" : ""
           }`}
         >
@@ -184,7 +184,7 @@ function TimelineStep({
             {step.bullets.map((bullet, bi) => (
               <li
                 key={bi}
-                className="font-body text-sm text-quattro-text-secondary leading-relaxed"
+                className="font-body text-sm text-pfs-text-secondary leading-relaxed"
               >
                 {bullet}
               </li>
@@ -217,10 +217,10 @@ function MobileStep({
     >
       {/* Icon node */}
       <div className="relative shrink-0">
-        <div className="w-12 h-12 rounded-full bg-quattro-surface-mid border-2 border-quattro-primary flex items-center justify-center">
+        <div className="w-12 h-12 rounded-full bg-pfs-surface-mid border-2 border-pfs-primary flex items-center justify-center">
           <Icon size={20} color="rgb(56,189,248)" />
         </div>
-        <div className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-quattro-accent flex items-center justify-center text-xs font-mono font-bold text-quattro-surface-dark">
+        <div className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-pfs-accent flex items-center justify-center text-xs font-mono font-bold text-pfs-surface-dark">
           {step.number}
         </div>
       </div>
@@ -232,7 +232,7 @@ function MobileStep({
           {step.bullets.map((bullet, i) => (
             <li
               key={i}
-              className="font-body text-sm text-quattro-text-secondary leading-relaxed"
+              className="font-body text-sm text-pfs-text-secondary leading-relaxed"
             >
               {bullet}
             </li>

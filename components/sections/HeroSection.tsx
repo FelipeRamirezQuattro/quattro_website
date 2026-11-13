@@ -85,7 +85,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="font-body text-base sm:text-xl text-quattro-text-secondary max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed"
+          className="font-body text-base sm:text-xl text-pfs-text-secondary max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed"
         >
           We are a custom software development company committed to turning your
           ideas into powerful solutions that drive your business forward. Expert
@@ -101,13 +101,13 @@ export default function HeroSection() {
         >
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-quattro-primary hover:bg-quattro-primary-light text-white font-display font-semibold text-base sm:text-lg rounded-xl transition-all duration-200 shadow-[0_0_30px_rgba(23,84,154,0.5)] hover:shadow-[0_0_50px_rgba(23,84,154,0.7)]"
+            className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 bg-pfs-primary hover:bg-pfs-primary-light text-white font-display font-semibold text-base sm:text-lg rounded-xl transition-all duration-200 shadow-[0_0_30px_rgba(23,84,154,0.5)] hover:shadow-[0_0_50px_rgba(23,84,154,0.7)]"
           >
             Start Your Project <ArrowRight size={18} />
           </Link>
           <Link
             href="/showcase"
-            className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 border border-quattro-border-dark hover:border-quattro-accent text-quattro-text-secondary hover:text-white font-display font-semibold text-base sm:text-lg rounded-xl transition-all duration-200"
+            className="inline-flex items-center gap-2 px-6 sm:px-8 py-3.5 sm:py-4 border border-pfs-border-dark hover:border-pfs-accent text-pfs-text-secondary hover:text-white font-display font-semibold text-base sm:text-lg rounded-xl transition-all duration-200"
           >
             <Play size={16} /> View Our Work
           </Link>
@@ -124,7 +124,7 @@ export default function HeroSection() {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
-          className="w-px h-12 bg-gradient-to-b from-quattro-accent to-transparent mx-auto"
+          className="w-px h-12 bg-gradient-to-b from-pfs-accent to-transparent mx-auto"
         />
       </motion.div>
     </section>

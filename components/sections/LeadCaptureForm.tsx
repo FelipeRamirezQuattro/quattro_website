@@ -76,8 +76,8 @@ export default function LeadCaptureForm({
 
   const inputCls = `w-full px-4 py-3 text-sm rounded-xl bg-transparent border focus:outline-none focus:ring-2 transition-colors ${
     dark
-      ? "border-quattro-border-dark text-white placeholder-quattro-text-secondary/50 focus:ring-quattro-primary focus:border-quattro-primary"
-      : "border-gray-200 text-quattro-text-dark placeholder-gray-400 focus:ring-quattro-primary focus:border-quattro-primary"
+      ? "border-pfs-border-dark text-white placeholder-pfs-text-secondary/50 focus:ring-pfs-primary focus:border-pfs-primary"
+      : "border-gray-200 text-pfs-text-dark placeholder-gray-400 focus:ring-pfs-primary focus:border-pfs-primary"
   }`;
 
   if (status === "success") {
@@ -85,12 +85,12 @@ export default function LeadCaptureForm({
       <div className="text-center py-8">
         <div className="text-4xl mb-3">✅</div>
         <p
-          className={`font-display font-semibold text-lg ${dark ? "text-white" : "text-quattro-text-dark"}`}
+          className={`font-display font-semibold text-lg ${dark ? "text-white" : "text-pfs-text-dark"}`}
         >
           Message received!
         </p>
         <p
-          className={`font-body text-sm mt-1 ${dark ? "text-quattro-text-secondary" : "text-gray-500"}`}
+          className={`font-body text-sm mt-1 ${dark ? "text-pfs-text-secondary" : "text-gray-500"}`}
         >
           We&#39;ll be in touch within 1 business day.
         </p>
@@ -109,7 +109,7 @@ export default function LeadCaptureForm({
             autoComplete="name"
           />
           {errors.name && (
-            <p className="text-quattro-error text-xs mt-1">
+            <p className="text-pfs-error text-xs mt-1">
               {errors.name.message}
             </p>
           )}
@@ -123,7 +123,7 @@ export default function LeadCaptureForm({
             autoComplete="email"
           />
           {errors.email && (
-            <p className="text-quattro-error text-xs mt-1">
+            <p className="text-pfs-error text-xs mt-1">
               {errors.email.message}
             </p>
           )}
@@ -146,13 +146,13 @@ export default function LeadCaptureForm({
       </select>
 
       {status === "error" && (
-        <p className="text-quattro-error text-sm">{errMsg}</p>
+        <p className="text-pfs-error text-sm">{errMsg}</p>
       )}
 
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 bg-quattro-primary hover:bg-quattro-primary-light text-white font-display font-semibold rounded-xl transition-all duration-200 disabled:opacity-60"
+        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 bg-pfs-primary hover:bg-pfs-primary-light text-white font-display font-semibold rounded-xl transition-all duration-200 disabled:opacity-60"
       >
         {status === "loading" ? (
           <>

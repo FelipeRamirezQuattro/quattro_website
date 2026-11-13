@@ -6,11 +6,11 @@ The app stores `leads`, `blog_posts`, and `newsletter_subscribers` in MySQL
 (deployed against the MySQL database on Hostinger Business Web Hosting).
 
 For local development, run a local MySQL instance (e.g.
-`docker run --name quattro-mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=quattro -p 3306:3306 -d mysql:8`
+`docker run --name pfs-connect-mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -e MYSQL_DATABASE=pfs_connect -p 3306:3306 -d mysql:8`
 or a native install), then load the schema once:
 
 ```bash
-mysql -h 127.0.0.1 -u root quattro < db/schema.sql
+mysql -h 127.0.0.1 -u root pfs_connect < db/schema.sql
 ```
 
 Copy `.env.local.example` to `.env.local` and fill in `DB_HOST`, `DB_PORT`,

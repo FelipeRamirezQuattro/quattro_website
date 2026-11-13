@@ -27,7 +27,7 @@ export default function CTABanner({ source = "cta" }: CTABannerProps) {
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <AnimatedSection>
-          <p className="font-mono text-quattro-accent text-sm tracking-widest uppercase mb-3">
+          <p className="font-mono text-pfs-accent text-sm tracking-widest uppercase mb-3">
             Let&#39;s Build Together
           </p>
           <h2 className="font-display font-bold text-2xl sm:text-4xl lg:text-5xl text-white mb-3 sm:mb-4">

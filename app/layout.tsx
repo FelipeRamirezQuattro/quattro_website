@@ -29,8 +29,8 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Quattro Software — Custom Software Development",
-    template: "%s | Quattro Software",
+    default: "PFS Connect — Custom Software Development",
+    template: "%s | PFS Connect",
   },
   description:
     "We are a custom software development company committed to turning your ideas into powerful solutions that drive your business forward. Expert team, tailored solutions, free consultations.",
@@ -43,19 +43,19 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    siteName: "Quattro Software",
-    title: "Quattro Software — Custom Software Development",
+    siteName: "PFS Connect",
+    title: "PFS Connect — Custom Software Development",
     description:
       "Custom software development, QuickBooks integrations, and modern web design.",
-    url: "https://quattroapps.com",
+    url: "https://quattrosoftware.online",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Quattro Software — Custom Software Development",
+    title: "PFS Connect — Custom Software Development",
     description:
       "Custom software development, QuickBooks integrations, and modern web design.",
   },
-  metadataBase: new URL("https://quattroapps.com"),
+  metadataBase: new URL("https://quattrosoftware.online"),
 };
 
 export default function RootLayout({
@@ -68,7 +68,7 @@ export default function RootLayout({
       lang="en"
       className={`${syne.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="font-body antialiased bg-quattro-surface-dark text-quattro-text-primary">
+      <body className="font-body antialiased bg-pfs-surface-dark text-pfs-text-primary">
         <TopBar />
         <Navbar />
         <main className="flex-1">{children}</main>

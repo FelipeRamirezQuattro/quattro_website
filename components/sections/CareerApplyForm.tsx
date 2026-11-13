@@ -61,11 +61,11 @@ export default function CareerApplyForm() {
   };
 
   return (
-    <div className="rounded-2xl border border-quattro-border-dark bg-quattro-surface-dark p-5 sm:p-6">
+    <div className="rounded-2xl border border-pfs-border-dark bg-pfs-surface-dark p-5 sm:p-6">
       <h3 className="font-display text-xl sm:text-2xl text-white font-bold mb-2">
         Apply Now
       </h3>
-      <p className="font-body text-sm text-quattro-text-secondary mb-4 sm:mb-5">
+      <p className="font-body text-sm text-pfs-text-secondary mb-4 sm:mb-5">
         Send us your details and we will follow up with next steps.
       </p>
 
@@ -79,7 +79,7 @@ export default function CareerApplyForm() {
             <input
               {...register("name")}
               placeholder="Full Name"
-              className="w-full h-11 px-3 rounded-lg bg-quattro-surface-mid border border-quattro-border-dark text-white placeholder-quattro-text-secondary/60 focus:outline-none focus:border-quattro-accent"
+              className="w-full h-11 px-3 rounded-lg bg-pfs-surface-mid border border-pfs-border-dark text-white placeholder-pfs-text-secondary/60 focus:outline-none focus:border-pfs-accent"
             />
             {errors.name && (
               <p className="text-red-400 text-xs mt-1">{errors.name.message}</p>
@@ -91,7 +91,7 @@ export default function CareerApplyForm() {
               type="email"
               {...register("email")}
               placeholder="Email"
-              className="w-full h-11 px-3 rounded-lg bg-quattro-surface-mid border border-quattro-border-dark text-white placeholder-quattro-text-secondary/60 focus:outline-none focus:border-quattro-accent"
+              className="w-full h-11 px-3 rounded-lg bg-pfs-surface-mid border border-pfs-border-dark text-white placeholder-pfs-text-secondary/60 focus:outline-none focus:border-pfs-accent"
             />
             {errors.email && (
               <p className="text-red-400 text-xs mt-1">
@@ -104,7 +104,7 @@ export default function CareerApplyForm() {
             <input
               {...register("position")}
               placeholder="Position of Interest"
-              className="w-full h-11 px-3 rounded-lg bg-quattro-surface-mid border border-quattro-border-dark text-white placeholder-quattro-text-secondary/60 focus:outline-none focus:border-quattro-accent"
+              className="w-full h-11 px-3 rounded-lg bg-pfs-surface-mid border border-pfs-border-dark text-white placeholder-pfs-text-secondary/60 focus:outline-none focus:border-pfs-accent"
             />
             {errors.position && (
               <p className="text-red-400 text-xs mt-1">
@@ -118,7 +118,7 @@ export default function CareerApplyForm() {
               rows={4}
               {...register("message")}
               placeholder="Short intro and relevant experience"
-              className="w-full px-3 py-2 rounded-lg bg-quattro-surface-mid border border-quattro-border-dark text-white placeholder-quattro-text-secondary/60 focus:outline-none focus:border-quattro-accent"
+              className="w-full px-3 py-2 rounded-lg bg-pfs-surface-mid border border-pfs-border-dark text-white placeholder-pfs-text-secondary/60 focus:outline-none focus:border-pfs-accent"
             />
             {errors.message && (
               <p className="text-red-400 text-xs mt-1">

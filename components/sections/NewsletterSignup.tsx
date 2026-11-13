@@ -54,14 +54,14 @@ export default function NewsletterSignup() {
         <div className="absolute inset-0 grid-overlay opacity-20 pointer-events-none" />
 
         <div className="relative z-10">
-          <div className="w-12 h-12 rounded-xl bg-quattro-accent/20 border border-quattro-accent/30 flex items-center justify-center mb-6">
+          <div className="w-12 h-12 rounded-xl bg-pfs-accent/20 border border-pfs-accent/30 flex items-center justify-center mb-6">
             <Mail size={22} color="rgb(56,189,248)" />
           </div>
 
           <h3 className="font-display font-bold text-2xl sm:text-3xl text-white mb-3">
             Stay ahead of the tech curve.
           </h3>
-          <p className="font-body text-quattro-text-secondary mb-8 leading-relaxed">
+          <p className="font-body text-pfs-text-secondary mb-8 leading-relaxed">
             Get the latest insights on AI automation, custom software,
             QuickBooks integrations, and digital transformation — straight to
             your inbox. No spam, ever.
@@ -78,7 +78,7 @@ export default function NewsletterSignup() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Your name (optional)"
-                className="w-full px-4 py-3 text-sm rounded-xl bg-quattro-surface-dark/60 border border-quattro-border-dark text-white placeholder-quattro-text-secondary/50 focus:outline-none focus:border-quattro-accent transition-colors"
+                className="w-full px-4 py-3 text-sm rounded-xl bg-pfs-surface-dark/60 border border-pfs-border-dark text-white placeholder-pfs-text-secondary/50 focus:outline-none focus:border-pfs-accent transition-colors"
                 autoComplete="name"
               />
               <input
@@ -87,16 +87,16 @@ export default function NewsletterSignup() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="your@email.com"
                 required
-                className="w-full px-4 py-3 text-sm rounded-xl bg-quattro-surface-dark/60 border border-quattro-border-dark text-white placeholder-quattro-text-secondary/50 focus:outline-none focus:border-quattro-accent transition-colors"
+                className="w-full px-4 py-3 text-sm rounded-xl bg-pfs-surface-dark/60 border border-pfs-border-dark text-white placeholder-pfs-text-secondary/50 focus:outline-none focus:border-pfs-accent transition-colors"
                 autoComplete="email"
               />
               {status === "error" && (
-                <p className="text-quattro-error text-xs">{msg}</p>
+                <p className="text-pfs-error text-xs">{msg}</p>
               )}
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-quattro-primary hover:bg-quattro-primary-light text-white font-display font-semibold rounded-xl transition-colors disabled:opacity-60"
+                className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-pfs-primary hover:bg-pfs-primary-light text-white font-display font-semibold rounded-xl transition-colors disabled:opacity-60"
               >
                 {status === "loading" ? (
                   <>

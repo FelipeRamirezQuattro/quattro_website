@@ -4,7 +4,7 @@ import ServicePageContent from "@/components/sections/ServicePageContent";
 import { services } from "@/data/services";
 
 export const metadata: Metadata = {
-  title: "Custom Application Development — Quattro Software",
+  title: "Custom Application Development — PFS Connect",
   description:
     "We create custom apps from the ground up, tailored to your processes, goals, and specific needs. Greater flexibility, scalability, and seamless integration.",
 };

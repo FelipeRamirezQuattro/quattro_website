@@ -43,7 +43,7 @@ export default function NetworkAnimation() {
   return (
     <div className="relative w-full aspect-[4/3] max-w-md mx-auto">
       {/* Soft glow background */}
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-quattro-primary/10 to-quattro-accent/5" />
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-pfs-primary/10 to-pfs-accent/5" />
 
       <svg viewBox="0 0 400 300" className="w-full h-full" aria-hidden="true">
         {/* Edges */}

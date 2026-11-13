@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = projects.find((p) => p.slug === slug);
   if (!project) return { title: "Project Not Found" };
   return {
-    title: `${project.title} — Quattro Software`,
+    title: `${project.title} — PFS Connect`,
     description: project.description,
   };
 }
@@ -33,7 +33,7 @@ export default async function ShowcaseDetailPage({ params }: Props) {
   return (
     <>
       {/* ── Hero ───────────────────────────────────────────────────── */}
-      <section className="relative py-28 bg-quattro-surface-dark overflow-hidden">
+      <section className="relative py-28 bg-pfs-surface-dark overflow-hidden">
         <div className="absolute inset-0 gradient-mesh opacity-25 pointer-events-none" />
         <div className="absolute inset-0 grid-overlay opacity-15 pointer-events-none" />
 
@@ -41,8 +41,8 @@ export default async function ShowcaseDetailPage({ params }: Props) {
           {/* Back link */}
           <Link
             href="/showcase"
-            className="inline-flex items-center gap-2 font-mono text-quattro-text-secondary text-sm
-                       hover:text-quattro-accent transition-colors mb-10"
+            className="inline-flex items-center gap-2 font-mono text-pfs-text-secondary text-sm
+                       hover:text-pfs-accent transition-colors mb-10"
           >
             <ArrowLeft size={14} />
             All Projects
@@ -54,8 +54,8 @@ export default async function ShowcaseDetailPage({ params }: Props) {
                 {project.categories.map((cat) => (
                   <span
                     key={cat}
-                    className="px-3 py-1 rounded-full bg-quattro-primary/20 text-quattro-accent
-                               font-mono text-xs border border-quattro-primary/30"
+                    className="px-3 py-1 rounded-full bg-pfs-primary/20 text-pfs-accent
+                               font-mono text-xs border border-pfs-primary/30"
                   >
                     {cat}
                   </span>
@@ -68,7 +68,7 @@ export default async function ShowcaseDetailPage({ params }: Props) {
               </h1>
             </AnimatedItem>
             <AnimatedItem>
-              <p className="font-body text-quattro-text-secondary text-lg max-w-2xl">
+              <p className="font-body text-pfs-text-secondary text-lg max-w-2xl">
                 {project.description}
               </p>
             </AnimatedItem>
@@ -77,13 +77,13 @@ export default async function ShowcaseDetailPage({ params }: Props) {
       </section>
 
       {/* ── Project image ──────────────────────────────────────────── */}
-      <section className="bg-quattro-surface-mid py-12">
+      <section className="bg-pfs-surface-mid py-12">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <AnimatedItem>
               <div
                 className={`relative rounded-2xl overflow-hidden bg-gradient-to-br ${project.gradient}
-                            h-72 sm:h-96 border border-quattro-border-dark`}
+                            h-72 sm:h-96 border border-pfs-border-dark`}
               >
                 {project.imageUrl ? (
                   <Image
@@ -112,7 +112,7 @@ export default async function ShowcaseDetailPage({ params }: Props) {
       </section>
 
       {/* ── Description ────────────────────────────────────────────── */}
-      <section className="py-20 bg-quattro-surface-mid">
+      <section className="py-20 bg-pfs-surface-mid">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection>
             <AnimatedItem>
@@ -121,13 +121,13 @@ export default async function ShowcaseDetailPage({ params }: Props) {
               </h2>
             </AnimatedItem>
             <AnimatedItem>
-              <p className="font-body text-quattro-text-secondary leading-relaxed text-lg">
+              <p className="font-body text-pfs-text-secondary leading-relaxed text-lg">
                 {project.description}
               </p>
             </AnimatedItem>
             <AnimatedItem>
-              <p className="font-body text-quattro-text-secondary leading-relaxed mt-4">
-                Quattro Software partnered with this client to understand their
+              <p className="font-body text-pfs-text-secondary leading-relaxed mt-4">
+                PFS Connect partnered with this client to understand their
                 unique operational challenges and craft a tailored solution that
                 scales with their growth. The engagement included discovery
                 workshops, iterative design reviews, and a thorough QA process

@@ -55,7 +55,7 @@ export default function WorkflowDiagram() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="py-24 bg-quattro-surface-dark relative overflow-hidden">
+    <section className="py-24 bg-pfs-surface-dark relative overflow-hidden">
       {/* Background grid */}
       <div className="absolute inset-0 grid-overlay opacity-30 pointer-events-none" />
 
@@ -68,13 +68,13 @@ export default function WorkflowDiagram() {
           ref={ref}
           className="text-center mb-16"
         >
-          <p className="font-mono text-quattro-accent text-sm tracking-widest uppercase mb-3">
+          <p className="font-mono text-pfs-accent text-sm tracking-widest uppercase mb-3">
             Our Process
           </p>
           <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-4">
             How We Turn Ideas Into Reality
           </h2>
-          <p className="font-body text-quattro-text-secondary text-lg max-w-2xl mx-auto">
+          <p className="font-body text-pfs-text-secondary text-lg max-w-2xl mx-auto">
             A proven five-step workflow that takes your concept from discovery
             to a live, production-ready solution.
           </p>
@@ -128,7 +128,7 @@ export default function WorkflowDiagram() {
                   <step.icon size={24} color="#fff" />
                   {/* Connector arrow */}
                   {i < steps.length - 1 && (
-                    <div className="absolute -right-[calc(50%+18px)] top-1/2 -translate-y-1/2 text-quattro-accent/40">
+                    <div className="absolute -right-[calc(50%+18px)] top-1/2 -translate-y-1/2 text-pfs-accent/40">
                       <ArrowRight size={14} />
                     </div>
                   )}
@@ -137,7 +137,7 @@ export default function WorkflowDiagram() {
                 <h3 className="font-display font-semibold text-white text-sm mb-1">
                   {step.label}
                 </h3>
-                <p className="font-body text-xs text-quattro-text-secondary leading-relaxed">
+                <p className="font-body text-xs text-pfs-text-secondary leading-relaxed">
                   {step.desc}
                 </p>
               </motion.div>
@@ -168,13 +168,13 @@ export default function WorkflowDiagram() {
                 <step.icon size={20} color="#fff" />
               </div>
               <div>
-                <div className="font-mono text-quattro-accent text-xs mb-1">
+                <div className="font-mono text-pfs-accent text-xs mb-1">
                   0{i + 1}
                 </div>
                 <h3 className="font-display font-semibold text-white mb-1">
                   {step.label}
                 </h3>
-                <p className="font-body text-sm text-quattro-text-secondary">
+                <p className="font-body text-sm text-pfs-text-secondary">
                   {step.desc}
                 </p>
               </div>

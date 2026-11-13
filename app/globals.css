@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ── Quattro Brand Tokens ──────────────────────────────────────────────── */
+/* ── PFS Connect Brand Tokens ──────────────────────────────────────────────── */
 :root {
   --color-primary: rgb(23, 84, 154);
   --color-primary-light: rgb(41, 112, 196);

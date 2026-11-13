@@ -55,7 +55,7 @@ export default function Navbar() {
       <nav
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "border-b border-quattro-border-dark shadow-[0_4px_30px_rgba(0,0,0,0.4)]"
+            ? "border-b border-pfs-border-dark shadow-[0_4px_30px_rgba(0,0,0,0.4)]"
             : ""
         }`}
         style={{
@@ -69,10 +69,10 @@ export default function Navbar() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-1 shrink-0">
               <span className="font-display font-bold text-xl text-white tracking-tight">
-                QUATTRO
+                PFS
               </span>
-              <span className="font-body font-light text-sm text-quattro-text-secondary mt-0.5 tracking-widest uppercase">
-                SOFTWARE
+              <span className="font-body font-light text-sm text-pfs-text-secondary mt-0.5 tracking-widest uppercase">
+                CONNECT
               </span>
             </Link>
 
@@ -93,8 +93,8 @@ export default function Navbar() {
                         }
                         className={`flex items-center gap-1 px-3 py-2 text-sm font-body transition-colors rounded-md ${
                           isActive(item.href)
-                            ? "text-quattro-accent"
-                            : "text-quattro-text-secondary hover:text-white"
+                            ? "text-pfs-accent"
+                            : "text-pfs-text-secondary hover:text-white"
                         }`}
                       >
                         {item.label}
@@ -129,13 +129,13 @@ export default function Navbar() {
                               >
                                 <Link
                                   href={child.href}
-                                  className="block px-4 py-3 hover:bg-quattro-primary/20 transition-colors group"
+                                  className="block px-4 py-3 hover:bg-pfs-primary/20 transition-colors group"
                                 >
-                                  <div className="text-sm font-body font-medium text-white group-hover:text-quattro-accent transition-colors">
+                                  <div className="text-sm font-body font-medium text-white group-hover:text-pfs-accent transition-colors">
                                     {child.label}
                                   </div>
                                   {child.description && (
-                                    <div className="text-xs text-quattro-text-secondary mt-0.5">
+                                    <div className="text-xs text-pfs-text-secondary mt-0.5">
                                       {child.description}
                                     </div>
                                   )}
@@ -151,15 +151,15 @@ export default function Navbar() {
                       href={item.href}
                       className={`relative px-3 py-2 text-sm font-body transition-colors rounded-md ${
                         isActive(item.href)
-                          ? "text-quattro-accent"
-                          : "text-quattro-text-secondary hover:text-white"
+                          ? "text-pfs-accent"
+                          : "text-pfs-text-secondary hover:text-white"
                       }`}
                     >
                       {item.label}
                       {isActive(item.href) && (
                         <motion.div
                           layoutId="nav-underline"
-                          className="absolute bottom-0 left-3 right-3 h-0.5 bg-quattro-accent rounded-full"
+                          className="absolute bottom-0 left-3 right-3 h-0.5 bg-pfs-accent rounded-full"
                         />
                       )}
                     </Link>
@@ -169,7 +169,7 @@ export default function Navbar() {
 
               <Link
                 href="/contact"
-                className="ml-2 px-4 py-2 text-sm font-body font-medium bg-quattro-primary hover:bg-quattro-primary-light text-white rounded-lg transition-colors"
+                className="ml-2 px-4 py-2 text-sm font-body font-medium bg-pfs-primary hover:bg-pfs-primary-light text-white rounded-lg transition-colors"
               >
                 Get Started
               </Link>
@@ -177,7 +177,7 @@ export default function Navbar() {
 
             {/* Mobile toggle */}
             <button
-              className="md:hidden text-quattro-text-secondary hover:text-white transition-colors p-2"
+              className="md:hidden text-pfs-text-secondary hover:text-white transition-colors p-2"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
             >
@@ -205,7 +205,7 @@ export default function Navbar() {
             <div className="flex justify-end p-6">
               <button
                 onClick={() => setMobileOpen(false)}
-                className="text-quattro-text-secondary hover:text-white p-2"
+                className="text-pfs-text-secondary hover:text-white p-2"
                 aria-label="Close menu"
               >
                 <X size={26} />
@@ -232,7 +232,7 @@ export default function Navbar() {
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="text-sm text-quattro-text-secondary hover:text-quattro-accent transition-colors py-1"
+                            className="text-sm text-pfs-text-secondary hover:text-pfs-accent transition-colors py-1"
                           >
                             {child.label}
                           </Link>
@@ -244,8 +244,8 @@ export default function Navbar() {
                       href={item.href}
                       className={`block text-2xl font-display font-bold py-2 transition-colors ${
                         isActive(item.href)
-                          ? "text-quattro-accent"
-                          : "text-white hover:text-quattro-accent"
+                          ? "text-pfs-accent"
+                          : "text-white hover:text-pfs-accent"
                       }`}
                     >
                       {item.label}
@@ -262,7 +262,7 @@ export default function Navbar() {
               >
                 <Link
                   href="/contact"
-                  className="inline-block px-8 py-3 bg-quattro-primary hover:bg-quattro-primary-light text-white font-display font-bold text-lg rounded-xl transition-colors"
+                  className="inline-block px-8 py-3 bg-pfs-primary hover:bg-pfs-primary-light text-white font-display font-bold text-lg rounded-xl transition-colors"
                 >
                   Get Started →
                 </Link>

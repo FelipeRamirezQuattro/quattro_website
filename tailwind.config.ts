@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        quattro: {
+        pfs: {
           primary: "rgb(23, 84, 154)",
           "primary-light": "rgb(41, 112, 196)",
           "primary-dark": "rgb(14, 55, 105)",

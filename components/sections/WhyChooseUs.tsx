@@ -32,13 +32,13 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-quattro-surface-light">
+    <section className="py-16 sm:py-20 lg:py-24 bg-pfs-surface-light">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-10 sm:mb-14">
-          <p className="font-mono text-quattro-primary text-sm tracking-widest uppercase mb-3">
+          <p className="font-mono text-pfs-primary text-sm tracking-widest uppercase mb-3">
             Our Promise
           </p>
-          <h2 className="font-display font-bold text-2xl sm:text-4xl lg:text-5xl text-quattro-text-dark">
+          <h2 className="font-display font-bold text-2xl sm:text-4xl lg:text-5xl text-pfs-text-dark">
             Why Choose Us?
           </h2>
         </AnimatedSection>
@@ -68,7 +68,7 @@ export default function WhyChooseUs() {
                 </div>
 
                 <div>
-                  <h3 className="font-display font-bold text-lg text-quattro-text-dark mb-2">
+                  <h3 className="font-display font-bold text-lg text-pfs-text-dark mb-2">
                     {title}
                   </h3>
                   <p className="font-body text-sm text-gray-500 leading-relaxed">
