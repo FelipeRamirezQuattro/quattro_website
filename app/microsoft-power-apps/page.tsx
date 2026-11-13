@@ -6,7 +6,7 @@ import ServicePageContent from "@/components/sections/ServicePageContent";
 const service = services.find((s) => s.slug === "microsoft-power-apps")!;
 
 export const metadata: Metadata = {
-  title: "Microsoft Power Apps — PFS Connect",
+  title: "Microsoft Power Apps",
   description: service.description,
 };
 

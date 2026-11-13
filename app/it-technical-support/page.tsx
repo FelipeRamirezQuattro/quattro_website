@@ -6,7 +6,7 @@ import ServicePageContent from "@/components/sections/ServicePageContent";
 const service = services.find((s) => s.slug === "it-technical-support")!;
 
 export const metadata: Metadata = {
-  title: "Staffing Solutions — PFS Connect",
+  title: "Staffing Solutions",
   description: service.description,
 };
 

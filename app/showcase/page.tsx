@@ -3,7 +3,7 @@ import ShowcaseGridClient from "@/components/sections/ShowcaseGridClient";
 import AnimatedSection, { AnimatedItem } from "@/components/ui/AnimatedSection";
 
 export const metadata: Metadata = {
-  title: "Showcase — PFS Connect",
+  title: "Showcase",
   description:
     "Explore selected PFS Connect projects across AI solutions, web development, app development, and QuickBooks integrations.",
 };

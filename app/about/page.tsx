@@ -8,7 +8,7 @@ import { team } from "@/data/team";
 import { values } from "@/data/values";
 
 export const metadata: Metadata = {
-  title: "About Us — PFS Connect",
+  title: "About Us",
   description:
     "Meet the team behind PFS Connect. We are a family-oriented custom software company founded in 2023, driven by integrity, reliability, and a passion for helping businesses grow.",
 };

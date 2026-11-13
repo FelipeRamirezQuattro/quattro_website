@@ -4,7 +4,7 @@ import CareerApplyForm from "@/components/sections/CareerApplyForm";
 import CTABanner from "@/components/sections/CTABanner";
 
 export const metadata: Metadata = {
-  title: "Work With Us — PFS Connect",
+  title: "Work With Us",
   description:
     "Explore career opportunities at PFS Connect and join a team focused on integrity, craftsmanship, and real client impact.",
 };

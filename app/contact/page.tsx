@@ -11,7 +11,7 @@ import ContactForm from "@/components/sections/ContactForm";
 import AnimatedSection, { AnimatedItem } from "@/components/ui/AnimatedSection";
 
 export const metadata: Metadata = {
-  title: "Contact Us — PFS Connect",
+  title: "Contact Us",
   description:
     "Get in touch with PFS Connect for AI solutions, custom software development, website design, QuickBooks integrations, Microsoft Power Apps, and staffing solutions.",
 };

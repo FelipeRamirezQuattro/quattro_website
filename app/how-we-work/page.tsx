@@ -12,7 +12,7 @@ import ProcessTimeline from "@/components/sections/ProcessTimeline";
 import CTABanner from "@/components/sections/CTABanner";
 
 export const metadata: Metadata = {
-  title: "How We Work — PFS Connect",
+  title: "How We Work",
   description:
     "Discover PFS Connect's transparent 7-step development process — from initial requirements gathering through design, build, UAT, and ongoing support.",
 };

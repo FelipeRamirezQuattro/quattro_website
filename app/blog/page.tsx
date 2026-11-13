@@ -3,7 +3,7 @@ import NewsletterSignup from "@/components/sections/NewsletterSignup";
 import BlogListingClient from "@/components/sections/BlogListingClient";
 
 export const metadata: Metadata = {
-  title: "Blog — PFS Connect",
+  title: "Blog",
   description:
     "Insights on software development, integrations, product strategy, and digital operations from the PFS Connect team.",
 };

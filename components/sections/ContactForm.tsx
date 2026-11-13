@@ -25,6 +25,7 @@ const serviceOptions = [
   "Custom Application Development",
   "Modern Website Design",
   "QuickBooks Integration Apps",
+  "Business Software Solutions & Implementation",
   "Microsoft Power Apps",
   "Staffing Solutions",
 ];

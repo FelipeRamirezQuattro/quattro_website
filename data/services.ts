@@ -69,6 +69,23 @@ export const services: Service[] = [
     heroImage: "/images/legacy/quickbooks-integration.png",
   },
   {
+    title: "Business Software Solutions & Implementation",
+    slug: "software-solutions",
+    icon: "Settings2",
+    href: "/services/software-solutions",
+    description:
+      "We help you choose, set up, and connect the right software for your business, so you get more from QuickBooks without paying for a bigger system you may not need. From assessment to training and ongoing support, we stay with you at every step.",
+    features: [
+      "Software Assessment",
+      "Setup & Implementation",
+      "Data Migration",
+      "Integration & Automation",
+      "Team Training",
+      "Ongoing Support",
+    ],
+    heroImage: "/images/legacy/application-development.png",
+  },
+  {
     title: "Microsoft Power Apps",
     slug: "microsoft-power-apps",
     icon: "Layers",

@@ -26,13 +26,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!post) {
     return {
-      title: "Article Not Found — PFS Connect",
+      title: "Article Not Found",
       description: "The requested article could not be found.",
     };
   }
 
   return {
-    title: `${post.title} — PFS Connect Blog`,
+    title: `${post.title}`,
     description: post.excerpt,
   };
 }

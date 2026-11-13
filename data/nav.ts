@@ -28,6 +28,11 @@ export const navItems: NavItem[] = [
         description: "Seamless financial data sync",
       },
       {
+        label: "Software Solutions",
+        href: "/services/software-solutions",
+        description: "The right tools, connected and supported",
+      },
+      {
         label: "Microsoft Power Apps",
         href: "/microsoft-power-apps",
         description: "Extend your Microsoft 365 ecosystem",

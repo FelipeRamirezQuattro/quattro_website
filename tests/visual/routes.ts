@@ -8,6 +8,7 @@ export const routes = [
   { name: "services-ai-solutions", path: "/services/ai-solutions" },
   { name: "services-custom-applications", path: "/services/custom-applications" },
   { name: "services-quickbooks", path: "/services/quickbooks" },
+  { name: "services-software-solutions", path: "/services/software-solutions" },
   { name: "services-website-development", path: "/services/website-development" },
   { name: "showcase", path: "/showcase" },
   { name: "showcase-project", path: "/showcase/inwest" },

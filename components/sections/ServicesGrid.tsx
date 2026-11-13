@@ -2,7 +2,16 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Code2, Monitor, BarChart3, Bot, ArrowRight } from "lucide-react";
+import {
+  Code2,
+  Monitor,
+  BarChart3,
+  Bot,
+  Settings2,
+  Layers,
+  Users,
+  ArrowRight,
+} from "lucide-react";
 import TiltCard from "@/components/ui/TiltCard";
 import AnimatedSection, { AnimatedItem } from "@/components/ui/AnimatedSection";
 
@@ -39,6 +48,30 @@ const cards = [
     href: "/services/quickbooks",
     glow: "rgba(41,112,196,0.3)",
   },
+  {
+    Icon: Settings2,
+    title: "Business Software Solutions",
+    body: "We help you choose, set up, and connect the right software for your business, from assessment and data migration to training and ongoing support.",
+    cta: "See How We Help",
+    href: "/services/software-solutions",
+    glow: "rgba(14,165,233,0.26)",
+  },
+  {
+    Icon: Layers,
+    title: "Microsoft Power Apps",
+    body: "Extend your Microsoft 365 ecosystem with low-code apps and automated flows that connect seamlessly with SharePoint, Teams, and the tools you already use.",
+    cta: "Explore Power Apps",
+    href: "/microsoft-power-apps",
+    glow: "rgba(56,189,248,0.24)",
+  },
+  {
+    Icon: Users,
+    title: "Staffing Solutions",
+    body: "Augment your team with vetted developers, QA analysts, and IT specialists who fit into your workflows quickly and stay supported along the way.",
+    cta: "Find Talent",
+    href: "/it-technical-support",
+    glow: "rgba(23,84,154,0.32)",
+  },
 ];
 
 export default function ServicesGrid() {
@@ -60,10 +93,13 @@ export default function ServicesGrid() {
 
         <AnimatedSection
           stagger
-          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 sm:gap-6"
+          className="flex flex-wrap justify-center gap-5 sm:gap-6"
         >
           {cards.map(({ Icon, title, body, cta, href, glow }) => (
-            <AnimatedItem key={title}>
+            <AnimatedItem
+              key={title}
+              className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-18px)]"
+            >
               <TiltCard className="h-full">
                 <div
                   className="h-full flex flex-col p-8 bg-pfs-surface-mid rounded-2xl border border-pfs-border-dark card-glow transition-all duration-300 group"

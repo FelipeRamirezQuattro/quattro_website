@@ -13,7 +13,7 @@ import AnimatedSection, { AnimatedItem } from "@/components/ui/AnimatedSection";
 import CTABanner from "@/components/sections/CTABanner";
 
 export const metadata: Metadata = {
-  title: "AI Solutions & Automation — PFS Connect",
+  title: "AI Solutions & Automation",
   description:
     "AI agent development, process automation, data integration, API development, cloud infrastructure, and automation consulting tailored to your operations.",
 };
